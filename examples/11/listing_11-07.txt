@@ -1,0 +1,21 @@
+<f:if condition="{snowboardTeachers}">
+	<f:then>
+		<div class="row">
+			<f:for each="{snowboardTeachers}" as="snowboardTeacher">
+				<div class="col-md-4 text-center">
+					<f:link.action action="show" arguments="{snowboardTeacher: snowboardTeacher}">
+						<h3>
+							{snowboardTeacher.fullName}
+						</h3>
+					</f:link.action>
+				</div>
+			</f:for>
+		</div>
+	</f:then>
+	<f:else>
+		<div class="alert alert-info">
+			<strong>Keine Snowboardlehrer!</strong>
+			Es wurden keine Datensätze gefunden.
+		</div>
+	</f:else>
+</f:if>

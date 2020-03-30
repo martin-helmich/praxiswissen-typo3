@@ -1,0 +1,43 @@
+plugin.tx_snowboardstaff_pi {
+	settings {
+		userImage = IMAGE
+		userImage {
+			file {
+				import = 1
+				import.data = field:picture
+				treatIdAsReference = 1
+				height = 250
+			}
+
+			params = class="img-circle"
+
+			sourceCollection {
+				small {
+					width = 250
+					srcsetCandidate = 1x
+				}
+				big {
+					width = 250
+					srcssetCandidate = 2x
+					pixelDensity = 2
+				}
+			}
+
+			layoutKey = srcset
+			layout {
+				srcset {
+					element = <img src="###SRC###" srcset="###SOURCECOLLECTION###" ###PARAMS### ###ALTPARAMS###>
+					source = |*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###
+				}
+			}
+		}
+	}
+	view {
+		templateRootPaths.0 = {$plugin.tx_snowboardstaff_pi.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_snowboardstaff_pi.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_snowboardstaff_pi.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_snowboardstaff_pi.persistence.storagePid}
+	}
+}

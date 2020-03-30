@@ -1,0 +1,116 @@
+page = PAGE
+page {
+
+  # Allgemeine Seiteneigenschaften setzen
+  config.doctype = html5
+
+  # Meta-Tags angeben
+  meta.author = Robert Meyer, Martin Helmich
+  meta.description = Hier steht eine Beschreibung
+  meta.viewport = width=device-width, initial-scale=1
+
+  # CSS-Dateien einfügen
+  includeCSS {
+    main = fileadmin/css/style.css
+    main.title = main
+    main.media = all
+  }
+
+  # JS-Dateien einfügen
+  includeJSFooter {
+    main = fileadmin/javascript/main.js
+  }
+
+  headerData {
+    10 = IMAGE
+    10 {
+      file {
+        import = 1
+        import {
+          data = levelmedia:-1,slide
+          listNum = 0
+        }
+        treatIdAsReference = 1
+        width = 1920
+      }
+
+      sourceCollection {
+        small {
+          width = 1920
+          pixelDensity = 1
+        }
+        big {
+          width = 1920
+          pixelDensity = 2
+        }
+      }
+
+      layoutKey = cssbg
+      layout {
+        cssbg {
+          element = <style type="text/css">###SOURCECOLLECTION###</style>
+          source = @media(min-resolution: ###PIXELDENSITY###dppx), (-webkit-min-device-pixel-ratio: ###PIXELDENSITY###) { .trailer { background-image: url(###SRC###); }}
+        }
+      }
+    }
+  }
+
+  # Die Designvorlage integrieren
+  10 = FLUIDTEMPLATE
+  10 {
+    file = fileadmin/templates/vorlage.html
+
+    variables {
+      brandLineFirst = TEXT
+      brandLineFirst.value = Snowboardschule
+
+      brandLineSecond = TEXT
+      brandLineSecond.value = Meyer, Müller & Schmidt
+
+      logo = IMAGE
+      logo {
+        file = fileadmin/images/logo.png
+        file.width = 200
+
+        params = class="logo"
+
+        sourceCollection {
+          small {
+            width = 200
+            srcsetCandidate = 1x
+          }
+          big {
+            width = 200
+            pixelDensity = 2
+            srcsetCandidate = 2x
+          }
+        }
+
+        layoutKey = srcset
+        layout {
+          srcset {
+            element = <img src="###SRC###" srcset="###SOURCECOLLECTION###" ###PARAMS### ###ALTPARAMS###>
+            source = |*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###
+          }
+        }
+      }
+
+      today = TEXT
+      today.data = date:d. m. Y
+
+      labelNews = TEXT
+      labelNews.value = Aktuelles
+
+      labelToday = TEXT
+      labelToday.value = Heute ist der
+
+      labelMore = TEXT
+      labelMore.value = Mehr
+
+      menuSecondary = HMENU
+      menuSecondary {
+
+      }
+    }
+  }
+}

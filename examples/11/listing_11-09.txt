@@ -1,0 +1,13 @@
+plugin.tx_snowboardstaff_pi {
+  settings {
+    displayUserImage = 1
+  }
+  view {
+    templateRootPaths.0 = {$plugin.tx_snowboardstaff_pi.view.templateRootPath}
+    partialRootPaths.0 = {$plugin.tx_snowboardstaff_pi.view.partialRootPath}
+    layoutRootPaths.0 = {$plugin.tx_snowboardstaff_pi.view.layoutRootPath}
+  }
+  persistence {
+    storagePid = {$plugin.tx_snowboardstaff_pi.persistence.storagePid}
+  }
+}

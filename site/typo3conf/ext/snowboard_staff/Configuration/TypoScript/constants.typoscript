@@ -1,0 +1,15 @@
+
+plugin.tx_snowboardstaff_pi {
+    view {
+        # cat=plugin.tx_snowboardstaff_pi/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:snowboard_staff/Resources/Private/Templates/
+        # cat=plugin.tx_snowboardstaff_pi/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:snowboard_staff/Resources/Private/Partials/
+        # cat=plugin.tx_snowboardstaff_pi/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:snowboard_staff/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_snowboardstaff_pi//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

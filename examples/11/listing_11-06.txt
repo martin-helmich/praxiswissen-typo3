@@ -1,0 +1,11 @@
+<div class="row">
+	<f:for each="{snowboardTeachers}" as="snowboardTeacher">
+		<div class="col-md-4 text-center">
+			<f:link.action action="show" arguments="{snowboardTeacher: snowboardTeacher}">
+				<h3>
+					{snowboardTeacher.fullName}
+				</h3>
+			</f:link.action>
+		</div>
+	</f:for>
+</div>

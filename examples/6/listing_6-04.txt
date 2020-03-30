@@ -1,0 +1,2 @@
+<img src="path/to/image-small.png"
+     srcset="path/to/image-small.png 1x,path/to/image-large.png 2x" />

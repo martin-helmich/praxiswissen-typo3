@@ -1,0 +1,15 @@
+<ul class="nav navbar-nav navbar-right">
+    <li class="active"><a href="aktuelles.html">Aktuelles</a></li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown">
+            Kurse
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="kurse/ski.html">Ski</a></li>
+            <li><a href="kurse/snowboard.html">Snowboard</a></li>
+        </ul>
+    </li>
+    <li><a href="termine.html">Termine</a></li>
+    <li><a href="trainer.html">Trainer</a></li>
+</ul>

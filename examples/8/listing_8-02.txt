@@ -1,0 +1,15 @@
+tt_content = CASE
+tt_content {
+  key.field = CType
+
+  header = TEXT
+  header {
+    field = header
+    wrap = <h1> | </h1>
+  }
+
+  textmedia = TEXT
+  textmedia {
+    field = bodytext
+  }
+}

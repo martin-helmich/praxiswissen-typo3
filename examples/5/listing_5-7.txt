@@ -1,0 +1,8 @@
+page = PAGE
+
+# Allgemeine Seiteneigenschaften setzen
+page.config.doctype = html5
+
+# Meta-Tags angeben
+page.meta.author = Robert Meyer, Martin Helmich
+page.meta.description = Hier steht eine Beschreibung

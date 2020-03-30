@@ -1,0 +1,24 @@
+{
+    "name": "snowboard/snowboard-staff",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Snowboard\\SnowboardStaff\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Snowboard\\SnowboardStaff\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "snowboard_staff": "self.version",
+        "typo3-ter/snowboard-staff": "self.version"
+    }
+}
