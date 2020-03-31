@@ -1,7 +1,7 @@
 version: "3"
 services:
   typo3:
-    image: martinhelmich/typo3:8.7
+    image: martinhelmich/typo3:9.5
     ports:
       - "80:80"
     volumes:
