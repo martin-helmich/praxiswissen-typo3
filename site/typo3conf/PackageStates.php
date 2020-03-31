@@ -26,6 +26,15 @@ return [
         'fluid_styled_content' => [
             'packagePath' => 'typo3/sysext/fluid_styled_content/',
         ],
+        'filelist' => [
+            'packagePath' => 'typo3/sysext/filelist/',
+        ],
+        'impexp' => [
+            'packagePath' => 'typo3/sysext/impexp/',
+        ],
+        'form' => [
+            'packagePath' => 'typo3/sysext/form/',
+        ],
         'install' => [
             'packagePath' => 'typo3/sysext/install/',
         ],
@@ -68,15 +77,6 @@ return [
         'felogin' => [
             'packagePath' => 'typo3/sysext/felogin/',
         ],
-        'filelist' => [
-            'packagePath' => 'typo3/sysext/filelist/',
-        ],
-        'form' => [
-            'packagePath' => 'typo3/sysext/form/',
-        ],
-        'impexp' => [
-            'packagePath' => 'typo3/sysext/impexp/',
-        ],
         'info' => [
             'packagePath' => 'typo3/sysext/info/',
         ],
@@ -109,9 +109,6 @@ return [
         ],
         'snowboard' => [
             'packagePath' => 'typo3conf/ext/snowboard/',
-        ],
-        'extension_builder' => [
-            'packagePath' => 'typo3conf/ext/extension_builder/',
         ],
         'snowboard_staff' => [
             'packagePath' => 'typo3conf/ext/snowboard_staff/',
