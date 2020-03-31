@@ -1,0 +1,30 @@
+name: Build release files
+
+on:
+  push:
+    tags: edition-*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: recursive
+
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=version::${GITHUB_REF/refs\/tags\//}
+
+    - name: Build release archive
+      run: |
+        zip -r praxiswissen-typo3-${{ steps.get_version.outputs.version }}.zip examples site docker-compose.yml
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: praxiswissen-typo3-${{ steps.get_version.outputs.version }}.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.token }}
