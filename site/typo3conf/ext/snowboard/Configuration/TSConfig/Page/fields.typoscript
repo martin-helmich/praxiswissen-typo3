@@ -1,0 +1,15 @@
+# Standardmäßig soll überall der angepasste Editor genutzt werden
+RTE.default.preset = snowboard
+
+# Beschriftungen für Feld "Typ" beim Seiteninhalt überschreiben
+TCEFORM.tt_content.header_layout.altLabels {
+  0 = Standardüberschrift
+  1 = Seitentitel
+  2 = Überschrift, 2. Ebene
+  3 = Überschrift, 3. Ebene
+  4 = Überschrift, 4. Ebene
+  5 = Überschrift, 5. Ebene
+}
+
+# Einzelne Items aus dem Feld "Typ" ausblenden
+TCEFORM.tt_content.header_layout.removeItems = 4,5,100

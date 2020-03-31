@@ -1,0 +1,32 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "Site Package f\u00fcr die Snowboardschule Meyer, M\u00fcller & Schmidt",
+        "emConf": {
+            "category": "templates",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "snowboard",
+        "name": "Snowboardschule",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [],
+        "plugins": [],
+        "vendorName": "Snowboard"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2018-12-19 08:27",
+        "extension_builder_version": "9.10.0",
+        "be_user": "Martin Helmich (1)"
+    }
+}

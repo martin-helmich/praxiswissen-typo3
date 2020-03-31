@@ -1,0 +1,70 @@
+
+renderingOptions:
+  submitButtonLabel: 'Formular absenden'
+type: Form
+identifier: kontaktformular
+label: Kontaktformular
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Kontaktanfrage von {text-1}'
+      recipientAddress: martin@helmich.me
+      recipientName: 'Martin Helmich'
+      senderAddress: contact@typo3.example
+      senderName: ''
+      replyToAddress: '{email-1}'
+      carbonCopyAddress: ''
+      blindCarbonCopyAddress: ''
+      format: html
+      attachUploads: true
+      translation:
+        language: ''
+    identifier: EmailToReceiver
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Neue Seite'
+    type: Page
+    identifier: page-1
+    label: Kontakt
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: Name
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Email
+        identifier: email-1
+        label: E-Mail-Adresse
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            placeholder: max@mustermann.example
+            required: required
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: 'Ihre Mitteilung'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty

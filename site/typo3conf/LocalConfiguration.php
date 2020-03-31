@@ -4,7 +4,7 @@ return [
         'adminOnly' => 0,
         'debug' => false,
         'explicitADmode' => 'explicitAllow',
-        'installToolPassword' => '$P$ChYoIi.Bl9E3iA2rFEia9pbtmUd7aP.',
+        'installToolPassword' => '$argon2i$v=19$m=16384,t=16,p=2$SE1qZXhhV01NZFE5TEJWMQ$avqzi2tkLr9BotynyjFlgojVzmwBvVVRYRSkTEd2f6o',
         'loginSecurityLevel' => 'normal',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
@@ -142,7 +142,6 @@ return [
         'features' => [
             'unifiedPageTranslationHandling' => true,
         ],
-        'isInitialDatabaseImportDone' => true,
         'sitename' => 'Praxiswissen TYPO3',
         'systemLogLevel' => 2,
         'systemMaintainers' => [

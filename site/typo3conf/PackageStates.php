@@ -11,41 +11,110 @@ return [
         'core' => [
             'packagePath' => 'typo3/sysext/core/',
         ],
+        'scheduler' => [
+            'packagePath' => 'typo3/sysext/scheduler/',
+        ],
         'extbase' => [
             'packagePath' => 'typo3/sysext/extbase/',
         ],
         'fluid' => [
             'packagePath' => 'typo3/sysext/fluid/',
         ],
-        'install' => [
-            'packagePath' => 'typo3/sysext/install/',
-        ],
-        'extensionmanager' => [
-            'packagePath' => 'typo3/sysext/extensionmanager/',
-        ],
-        'lang' => [
-            'packagePath' => 'typo3/sysext/lang/',
-        ],
-        'backend' => [
-            'packagePath' => 'typo3/sysext/backend/',
-        ],
-        'cshmanual' => [
-            'packagePath' => 'typo3/sysext/cshmanual/',
-        ],
-        'filelist' => [
-            'packagePath' => 'typo3/sysext/filelist/',
-        ],
         'frontend' => [
             'packagePath' => 'typo3/sysext/frontend/',
+        ],
+        'fluid_styled_content' => [
+            'packagePath' => 'typo3/sysext/fluid_styled_content/',
+        ],
+        'install' => [
+            'packagePath' => 'typo3/sysext/install/',
         ],
         'recordlist' => [
             'packagePath' => 'typo3/sysext/recordlist/',
         ],
-        'saltedpasswords' => [
-            'packagePath' => 'typo3/sysext/saltedpasswords/',
+        'backend' => [
+            'packagePath' => 'typo3/sysext/backend/',
         ],
-        'sv' => [
-            'packagePath' => 'typo3/sysext/sv/',
+        'indexed_search' => [
+            'packagePath' => 'typo3/sysext/indexed_search/',
+        ],
+        'recycler' => [
+            'packagePath' => 'typo3/sysext/recycler/',
+        ],
+        'reports' => [
+            'packagePath' => 'typo3/sysext/reports/',
+        ],
+        'setup' => [
+            'packagePath' => 'typo3/sysext/setup/',
+        ],
+        'rte_ckeditor' => [
+            'packagePath' => 'typo3/sysext/rte_ckeditor/',
+        ],
+        'about' => [
+            'packagePath' => 'typo3/sysext/about/',
+        ],
+        'adminpanel' => [
+            'packagePath' => 'typo3/sysext/adminpanel/',
+        ],
+        'belog' => [
+            'packagePath' => 'typo3/sysext/belog/',
+        ],
+        'beuser' => [
+            'packagePath' => 'typo3/sysext/beuser/',
+        ],
+        'extensionmanager' => [
+            'packagePath' => 'typo3/sysext/extensionmanager/',
+        ],
+        'felogin' => [
+            'packagePath' => 'typo3/sysext/felogin/',
+        ],
+        'filelist' => [
+            'packagePath' => 'typo3/sysext/filelist/',
+        ],
+        'form' => [
+            'packagePath' => 'typo3/sysext/form/',
+        ],
+        'impexp' => [
+            'packagePath' => 'typo3/sysext/impexp/',
+        ],
+        'info' => [
+            'packagePath' => 'typo3/sysext/info/',
+        ],
+        'lowlevel' => [
+            'packagePath' => 'typo3/sysext/lowlevel/',
+        ],
+        'redirects' => [
+            'packagePath' => 'typo3/sysext/redirects/',
+        ],
+        'seo' => [
+            'packagePath' => 'typo3/sysext/seo/',
+        ],
+        'sys_note' => [
+            'packagePath' => 'typo3/sysext/sys_note/',
+        ],
+        't3editor' => [
+            'packagePath' => 'typo3/sysext/t3editor/',
+        ],
+        'tstemplate' => [
+            'packagePath' => 'typo3/sysext/tstemplate/',
+        ],
+        'viewpage' => [
+            'packagePath' => 'typo3/sysext/viewpage/',
+        ],
+        'workspaces' => [
+            'packagePath' => 'typo3/sysext/workspaces/',
+        ],
+        'news' => [
+            'packagePath' => 'typo3conf/ext/news/',
+        ],
+        'snowboard' => [
+            'packagePath' => 'typo3conf/ext/snowboard/',
+        ],
+        'extension_builder' => [
+            'packagePath' => 'typo3conf/ext/extension_builder/',
+        ],
+        'snowboard_staff' => [
+            'packagePath' => 'typo3conf/ext/snowboard_staff/',
         ],
     ],
     'version' => 5,
