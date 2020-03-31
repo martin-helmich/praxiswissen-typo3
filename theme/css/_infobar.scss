@@ -1,0 +1,58 @@
+
+.infobar {
+  background: #f5f5f5;
+  padding: 10px 0;
+
+  @media (max-width: 767px) {
+    .pull-right {
+      float: none !important;
+    }
+
+    form {
+      input, button {
+        float: left;
+        width: auto;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  .youarehere {
+    float: left;
+    padding: $breadcrumb-padding-vertical 0;
+    margin-right: 16px;
+  }
+
+  .language, .print {
+    padding: $breadcrumb-padding-vertical 0;
+    margin-right: 16px;
+    float: right;
+  }
+
+  .breadcrumb {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .breadcrumb {
+      padding-left: 0;
+    }
+
+    .youarehere {
+      display: none;
+    }
+
+    .print {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .breadcrumb {
+      clear: both;
+    }
+  }
+}

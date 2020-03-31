@@ -1,0 +1,29 @@
+
+.navbar {
+  font-family: 'Droid Sans', sans-serif;
+
+  &.affix {
+    .navbar-header img.logo {
+      height: $navbar-height;
+      width: auto;
+    }
+  }
+}
+
+.navbar-header img.logo {
+  float: left;
+}
+
+.navbar-nav > li {
+  &.active {
+    border-bottom: 4px solid white !important;
+  }
+
+  & > a {
+    vertical-align: bottom;
+
+    &:hover {
+      background: $navbar-inverse-bg !important;
+    }
+  }
+}

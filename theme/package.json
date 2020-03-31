@@ -1,0 +1,21 @@
+{
+  "name": "pwt3-template",
+  "version": "1.0.0",
+  "description": "HTML template for \"Praxiswissen TYPO3\"",
+  "main": "index.js",
+  "scripts": {
+    "deps": "bower install",
+    "build": "gulp"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-bower": "0.0.15",
+    "gulp-sass": "^4.0.2",
+    "lite-server": "^1.3.2"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.0"
+  }
+}

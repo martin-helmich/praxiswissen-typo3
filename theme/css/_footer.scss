@@ -1,0 +1,35 @@
+
+footer {
+  background-color: lighten($ice-blue, 30%);
+  padding: $footer-spacing 0;
+  margin-top: $footer-spacing;
+
+  & .row > * {
+    margin-bottom: $footer-spacing;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    border-bottom: 1px solid $ice-blue;
+    color: $ice-blue;
+  }
+
+  .date-wrapper {
+    text-align: right;
+    padding-top: 24px;
+
+    .date {
+      font-size: 150%;
+    }
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+
+    }
+  }
+}

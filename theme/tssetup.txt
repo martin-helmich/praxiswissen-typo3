@@ -1,0 +1,188 @@
+# Default PAGE object:
+page = PAGE
+page {
+  10 = FLUIDTEMPLATE
+  10 {
+    file = fileadmin/template/template.html
+
+    variables {
+      brand = TEXT
+      brand.value = Snowboardschule Meier, Müller & Schmidt
+
+      brandLineFirst = TEXT
+      brandLineFirst.value = Snowboardschule
+
+      brandLineSecond = TEXT
+      brandLineSecond.value = Meyer, Müller & Schmidt
+
+      labelSearch = TEXT
+      labelSearch.value = Suchen
+
+      labelSearchPlaceholder = TEXT
+      labelSearchPlaceholder.value = Ihr Suchtext
+
+      labelLanguage = TEXT
+      labelLanguage.value = Sprache
+
+      labelYouarehere = TEXT
+      labelYouarehere.value = Sie sind hier:
+
+      image = IMG_RESOURCE
+      image {
+        file {
+          import = 1
+          import.data = levelmedia:-1, slide
+          import.listNum = 0
+
+          treatIdAsReference = 1
+          width = 1920
+        }
+      }
+
+      logo =< lib.logo
+
+      contentMain =< lib.content.main
+      contentTeaser =< lib.content.teaser
+      contentMargin =< lib.content.margin
+
+      menuPrimary =< lib.menu
+      menuSecondary =< lib.metamenu
+      menuBreadcrumb =< lib.breadcrumb
+
+    }
+
+  }
+
+  includeCSS {
+    app = fileadmin/template/css/app.css
+    font = fileadmin/template/css/fonts.css
+  }
+
+  includeJSFooterlibs {
+    app = fileadmin/template/javascript/app.js
+  }
+}
+
+lib {
+  content.main < styles.content.get
+
+  content.teaser < styles.content.get
+  content.teaser.select.where = colPos=1
+
+  content.margin < styles.content.get
+  content.margin.select.where = colPos=2
+
+  logo = IMAGE
+  logo {
+    file = fileadmin/template/images/logo.png
+    file {
+      width = 200
+      height = 200
+    }
+
+    params = class="logo"
+  }
+
+  breadcrumb = HMENU
+  breadcrumb {
+    special = rootline
+
+    1 = TMENU
+    1 {
+      wrap = <ol class="breadcrumb"> | </ol>
+
+      NO = 1
+      NO {
+        wrapItemAndSub = <li> | </li>
+      }
+
+      CUR = 1
+      CUR {
+        doNotLinkIt = 1
+        wrapItemAndSub = <li class="active"> | </li>
+      }
+    }
+  }
+
+  metamenu = HMENU
+  metamenu {
+    special = directory
+    special.value = 8
+
+    1 = TMENU
+    1 {
+      wrap= <ul> | </ul>
+
+      NO = 1
+      NO {
+        wrapItemAndSub = <li> | </li>
+      }
+    }
+  }
+
+  menu = HMENU
+  menu {
+    special = directory
+    special.value = 2
+
+    1 = TMENU
+    1 {
+      expAll = 1
+      wrap = <ul class="nav navbar-nav navbar-right"> | </ul>
+
+      NO = 1
+      NO {
+        wrapItemAndSub = <li>|</li>
+      }
+
+      IFSUB < .NO
+      IFSUB {
+        wrapItemAndSub = <li class="dropdown"> | </li>
+        linkWrap = | <span class="caret"></span>
+
+        ATagParams = class="dropdown-toggle" role="button" data-toggle="dropdown"
+        ATagBeforeWrap = 1
+      }
+
+      ACT < .NO
+      ACT {
+        wrapItemAndSub = <li class="active"> | </li>
+      }
+
+      ACTIFSUB < .IFSUB
+      ACTIFSUB {
+        wrapItemAndSub = <li class="dropdown active"> | </li>
+      }
+    }
+
+    2 < .1
+    2 {
+      wrap = <ul class="dropdown-menu"> | </ul>
+    }
+
+    3 < .2
+    4 < .2
+  }
+
+  language = HMENU
+  language {
+    special = language
+    special.value = 0, 1
+
+    1 = TMENU
+    1 {
+      wrap = <ul class="dropdown-menu dropdown-menu-right"> | </ul>
+
+      NO = 1
+      NO {
+        wrapItemAndSub = <li> | </li>
+        stdWrap.override = Englisch || Deutsch
+      }
+
+      USERDEF1 < .NO
+      USERDEF1 {
+        wrapItemAndSub = <li class="disabled"> | </li>
+      }
+    }
+  }
+}

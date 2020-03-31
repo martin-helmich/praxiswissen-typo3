@@ -1,0 +1,30 @@
+
+@media (min-width: 992px) {
+  .trailer {
+    padding-top: $navbar-affix-height;
+  }
+}
+@media (max-width: 992px) {
+  .trailer {
+    padding-top: $navbar-height;
+  }
+}
+
+.jumbotron {
+  background: none;
+  text-shadow: $header-shadow;
+  margin-bottom: 0;
+  min-height: 350px;
+
+  h1 {
+    margin-top: 1em;
+    text-align: center;
+  }
+}
+
+.trailer {
+  background: url(../images/trailer-default.jpg) no-repeat center center fixed;
+  background-size: cover;
+  margin-bottom: 0;
+  color: white;
+}

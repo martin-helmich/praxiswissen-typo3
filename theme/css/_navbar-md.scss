@@ -1,0 +1,63 @@
+
+@media (min-width: 992px) {
+  .navbar {
+    &.affix-top {
+      min-height: $navbar-affix-height;
+      background: transparentize($warm-red, .5);
+
+      .navbar-header img.logo {
+        height: $navbar-affix-height;
+        width: auto;
+        padding-left: ($navbar-height - $navbar-affix-height) / 2;
+        padding-right: ($navbar-height - $navbar-affix-height) / 2 + 16;
+        margin-right: $navbar-affix-height / 8;
+      }
+
+      .navbar-brand {
+        padding-top: 50px;
+        width: 300px;
+        line-height: 150%;
+        text-shadow: $header-shadow;
+
+        .brand-line:nth-child(1) {
+          font-size: 160%;
+        }
+
+        .brand-line:nth-child(2) {
+          font-size: 115%;
+        }
+      }
+
+      ul.navbar-nav > li {
+        padding-top: $navbar-affix-height / 2;
+        height: $navbar-affix-height;
+        border-bottom: 4px solid transparent;
+
+        & > a {
+          font-size: 140%;
+          font-weight: bold;
+          text-shadow: $header-shadow
+        }
+      }
+    }
+
+    &.affix {
+      .navbar-header img.logo {
+        padding-right: 16px;
+      }
+
+      .navbar-brand {
+        padding-top: 21px;
+        width: 200px;
+
+        .brand-line:nth-child(1) {
+          font-size: 110%;
+        }
+
+        .brand-line:nth-child(2) {
+          font-size: 80%;
+        }
+      }
+    }
+  }
+}

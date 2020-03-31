@@ -1,0 +1,33 @@
+
+$warm-red: #76001B;
+$ice-blue: #4D87C7;
+
+$brand-primary: $warm-red;
+
+$font-family-sans-serif:  "Droid Sans", Arial, sans-serif !default;
+
+$navbar-inverse-bg: $brand-primary;
+$navbar-inverse-color: white;
+$navbar-inverse-link-color: white;
+$navbar-inverse-link-active-bg: none;
+$navbar-default-link-hover-bg: $navbar-inverse-bg;
+$navbar-inverse-toggle-border-color: white;
+$navbar-inverse-border: none;
+$navbar-height: 80px;
+$navbar-affix-height: $navbar-height * 2;
+
+$breadcrumb-bg: none;
+
+$header-shadow: 2px 2px 4px rgba(0,0,0,0.75);
+
+$footer-spacing: 50px;
+
+@import "bootstrap";
+
+@import "navbar";
+@import "navbar-sm";
+@import "navbar-md";
+@import "jumbotron";
+@import "infobar";
+@import "main";
+@import "footer";

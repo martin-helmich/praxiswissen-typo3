@@ -1,0 +1,19 @@
+{
+  "name": "mhelmich/pwt3-template",
+  "version": "1.0.0",
+  "authors": [
+    "Martin Helmich <kontakt@martin-helmich.de>"
+  ],
+  "description": "HTML template for \"Praxiswissen TYPO3\"",
+  "license": "CC-BY-SA",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6"
+  }
+}
