@@ -1,0 +1,39 @@
+page = PAGE
+page {
+
+  # Allgemeine Seiteneigenschaften setzen
+  config.doctype = html5
+
+  # Meta-Tags angeben
+  meta.author = Robert Meyer, Martin Helmich
+  meta.description = Hier steht eine Beschreibung
+
+  # CSS-Dateien einfügen
+  includeCSS {
+    main = fileadmin/css/style.css
+    main.title = main
+    main.media = all
+  }
+
+  # JS-Dateien einfügen
+  includeJSFooter {
+    main = fileadmin/javascript/main.js
+  }
+
+  # Die Designvorlage integrieren
+  10 = FLUIDTEMPLATE
+  10 {
+    file = fileadmin/templates/vorlage-v1.html
+
+    variables {
+      brandLineFirst = TEXT
+      brandLineFirst.value = Snowboardschule
+
+      brandLineSecond = TEXT
+      brandLineSecond.value = Meyer, Müller & Schmidt
+
+      today = TEXT
+      today.data = date:d. m. Y
+    }
+  }
+}

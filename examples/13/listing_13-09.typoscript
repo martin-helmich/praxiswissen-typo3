@@ -1,0 +1,5 @@
+TCEMAIN.permissions {
+   user = show,editcontent,edit,delete,new
+   group = show,editcontent,edit,delete,new
+   everybody = show
+}

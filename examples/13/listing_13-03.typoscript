@@ -1,0 +1,2 @@
+RTE.default.preset = default
+RTE.config.tx_news_domain_model_news.bodytext.preset = minimal

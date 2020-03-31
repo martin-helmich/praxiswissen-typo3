@@ -1,0 +1,21 @@
+page = PAGE
+page {
+
+  # Allgemeine Seiteneigenschaften setzen
+  config.doctype = html5
+
+  # Meta-Tags angeben
+  meta.author = Robert Meyer, Martin Helmich
+  meta.description = Hier steht eine Beschreibung
+
+  # CSS-Dateien einfügen
+  includeCSS {
+    main = fileadmin/css/style.css
+    main.title = main
+    main.media = all
+  }
+
+  # Die Designvorlage integrieren
+  10 = FILE
+  10.file = fileadmin/templates/vorlage-v1.html
+}

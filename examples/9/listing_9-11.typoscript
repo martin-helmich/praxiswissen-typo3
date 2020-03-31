@@ -1,0 +1,345 @@
+# Allgemeine Konfigurationen
+config {
+  linkVars = L
+  uniqueLinkVars = 1
+  sys_language_uid = 0
+  language = de
+  locale_all = de_DE
+  spamProtectEmailAddresses = 1
+}
+
+page = PAGE
+page {
+
+  # Allgemeine Seiteneigenschaften setzen
+  config.doctype = html5
+
+  # Meta-Tags angeben
+  meta.author = Robert Meyer, Martin Helmich
+  meta.description = Hier steht eine Beschreibung
+  meta.viewport = width=device-width, initial-scale=1
+
+  # CSS-Dateien einfügen
+  includeCSS {
+    main = fileadmin/css/style.css
+    main.title = main
+    main.media = all
+  }
+
+  # JS-Dateien einfügen
+  includeJSFooter {
+    main = fileadmin/javascript/main.js
+  }
+
+  headerData {
+    10 = IMAGE
+    10 {
+      file {
+        import = 1
+        import {
+          data = levelmedia:-1,slide
+          listNum = 0
+        }
+        treatIdAsReference = 1
+        width = 1920
+      }
+
+      sourceCollection {
+        small {
+          width = 1920
+          pixelDensity = 1
+        }
+        big {
+          width = 1920
+          pixelDensity = 2
+        }
+      }
+
+      layoutKey = cssbg
+      layout {
+        cssbg {
+          element = <style type="text/css">###SOURCECOLLECTION###</style>
+          source = @media(min-resolution: ###PIXELDENSITY###dppx), (-webkit-min-device-pixel-ratio: ###PIXELDENSITY###) { .trailer { background-image: url(###SRC###); }}
+        }
+      }
+    }
+  }
+
+  # Die Designvorlage integrieren
+  10 = FLUIDTEMPLATE
+  10 {
+    file = fileadmin/templates/vorlage-v2.html
+
+    variables {
+      brandLineFirst = TEXT
+      brandLineFirst.value = Snowboardschule
+      brandLineFirst.lang.en = Snowboard school
+
+      brandLineSecond = TEXT
+      brandLineSecond.value = Meyer, Müller & Schmidt
+
+      logo = IMAGE
+      logo {
+        file = fileadmin/images/logo.png
+        file.width = 200
+
+        params = class="logo"
+
+        sourceCollection {
+          small {
+            width = 200
+            srcsetCandidate = 1x
+          }
+          big {
+            width = 200
+            pixelDensity = 2
+            srcsetCandidate = 2x
+          }
+        }
+
+        layoutKey = srcset
+        layout {
+          srcset {
+            element = <img src="###SRC###" srcset="###SOURCECOLLECTION###" ###PARAMS### ###ALTPARAMS###>
+            source = |*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###
+          }
+        }
+      }
+
+      today = TEXT
+      today.data = date:d. m. Y
+
+      labelNews = TEXT
+      labelNews.value = Aktuelles
+      labelNews.lang.en = News
+
+      labelToday = COA_INT
+      labelToday {
+        10 = TEXT
+        10.value = Guten Morgen
+        10.lang.en = Good morning
+        10.wrap = |!&nbsp;
+
+        20 = TEXT
+        20.value = Heute ist der
+        20.lang.en = Today is
+      }
+
+      labelMore = TEXT
+      labelMore.value = Mehr
+      labelMore.lang.en = More
+
+      menuPrimary = HMENU
+      menuPrimary {
+        special = directory
+        special.value = 2
+
+        wrap = <ul class="nav navbar-nav navbar-right">|</ul>
+
+        1 = TMENU
+        1 {
+          expAll = 1
+
+          NO = 1
+          NO {
+            wrapItemAndSub = <li>|</li>
+          }
+
+          ACT < .NO
+          ACT {
+            wrapItemAndSub = <li class="active">|</li>
+          }
+
+          IFSUB < .NO
+          IFSUB {
+            wrapItemAndSub = <li class="dropdown"> | </li>
+            linkWrap = | <span class="caret"></span>
+
+            ATagParams = class="dropdown-toggle" role="button" data-toggle="dropdown"
+            ATagBeforeWrap = 1
+          }
+
+          ACTIFSUB < .IFSUB
+          ACTIFSUB {
+            wrapItemAndSub = <li class="active dropdown"> | </li>
+          }
+        }
+
+        2 < .1
+        2 {
+          wrap = <ul class="dropdown-menu">|</ul>
+        }
+      }
+
+      menuSecondary = HMENU
+      menuSecondary {
+        special = directory
+        special.value = 3
+
+        wrap = <ul>|</ul>
+
+        1 = TMENU
+        1 {
+          NO = 1
+          NO {
+            linkWrap = <li>|</li>
+          }
+        }
+      }
+
+      menuBreadcrumb = COA
+      menuBreadcrumb {
+        10 = TEXT
+        10 {
+          value = Sie sind hier:
+          lang.en = You are here:
+          wrap = <span class="youarehere"> | </span>
+        }
+
+        20 = HMENU
+        20 {
+          special = rootline
+          special.range = 2|-1
+
+          1 = TMENU
+          1 {
+            wrap = <ol class="breadcrumb">|</ol>
+
+            NO = 1
+            NO {
+              linkWrap = <li>|</li>
+            }
+
+            CUR = 1
+            CUR {
+              linkWrap = <li class="active">|</li>
+              doNotLinkIt = 1
+            }
+          }
+        }
+      }
+
+      # Den Inhalt der Hauptspalte ausgeben
+      contentMain < styles.content.get
+
+      # Den Inhalt der rechten Spalte ausgeben
+      contentMargin = COA
+      contentMargin {
+        10 < styles.content.get
+        10.select.where = colPos=2
+
+        20 < styles.content.get
+        20.select.where = colPos=2
+        20.select.pidInList = 23
+      }
+
+      # Den Inhalt des Trailers auslesen
+      contentTrailer < styles.content.get
+      contentTrailer.select.where = colPos=5
+
+      # Den Sprachwechsler darstellen
+      language = COA
+      language {
+        wrap = <div class="btn-group">|</div>
+
+        10 = TEXT
+        10 {
+          value = Sprache
+          lang.en = Language
+          wrap (
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="glyphicon glyphicon-globe"></i>&nbsp;
+              |
+              &nbsp;<span class="caret"></span>
+            </a>
+          )
+        }
+
+        20 = HMENU
+        20 {
+          special = language
+          special.value = 0,1
+
+          1 = TMENU
+          1 {
+            wrap = <ul class="dropdown-menu dropdown-menu-right"> | </ul>
+
+            NO = 1
+            NO {
+              linkWrap = <li>|</li>
+              stdWrap.override = Deutsch || Englisch
+            }
+
+            ACT < .NO
+            ACT.linkWrap = <li class="active"> | </li>
+          }
+        }
+      }
+
+      # Den Link zur Druckversion darstellen
+      print = TEXT
+      print {
+        value = Druckansicht
+        lang.en = Print view
+
+        typolink {
+          wrap = <i class="glyphicon glyphicon-print"></i>&nbsp;|
+          ATagBeforeWrap = 1
+
+          parameter.dataWrap = {page:uid},1
+          target = _blank
+        }
+      }
+    }
+  }
+}
+
+# Eine Druckversion der Seite erstellen
+print = PAGE
+print {
+  typeNum = 1
+  10 < styles.content.get
+}
+
+lib.contentElement {
+  partialRootPaths {
+    10 = fileadmin/templates/content/partials
+  }
+}
+
+plugin.tx_form.settings {
+  yamlConfigurations {
+    100 = fileadmin/forms.yaml
+  }
+}
+
+plugin.tx_felogin_pi1 {
+  templateFile = fileadmin/templates/ext/felogin/FrontendLogin.html
+}
+
+# Zeitabhängiger Begrüßungstext
+[hour >= 11]
+page.10.variables.labelToday.10.value = Guten Tag
+page.10.variables.labelToday.10.lang.en = Good day
+[hour >= 19]
+page.10.variables.labelToday.10.value = Guten Abend
+page.10.variables.labelToday.10.lang.en = Good evening
+[global]
+
+# Mehrsprachigkeit
+[globalVar = GP:L=1]
+config {
+  sys_language_uid = 1
+  language = en
+  locale_all = en_UK
+}
+
+page.10.variables.language.20.1.NO.stdWrap.override = German || English
+[global]
+
+# Standard-Templates in der Druckansicht
+[globalVar = GP:type=1]
+lib.contentElement {
+  partialRootPaths.10 >
+}
+[global]

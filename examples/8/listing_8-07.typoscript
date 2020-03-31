@@ -1,0 +1,13 @@
+lib.userlist = CONTENT
+lib.userlist {
+  table = fe_users
+
+  select.orderBy = username
+  select.pidInList = 15
+
+  renderObj = TEXT
+  renderObj {
+    field = username
+    wrap = | <br />
+  }
+}

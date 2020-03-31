@@ -1,0 +1,38 @@
+imports:
+- { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+- { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+- { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+  config:
+    contentsCss:
+      - "EXT:rte_ckeditor/Resources/Public/Css/contents.css"
+      - "EXT:snowboard/Resources/Public/Stylesheets/editor.css"
+
+    stylesSet:
+    - name: "Hervorgehoben"
+      element: "span"
+      styles:
+        "color": "#76001B"
+        "font-weight": "bolder"
+        "text-transform": "uppercase"
+    - name: "Warnhinweis"
+      element: "div"
+      attributes:
+        class: "alert alert-danger"
+      
+    format_tags: "p;h1;h2;h3;pre"
+
+    toolbar:
+    - [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord' ]
+    - [ 'Undo', 'Redo', 'RemoveFormat', 'ShowBlocks' ]
+    - [ 'Link', 'Unlink', 'SpecialChar']
+    - [ 'NumberedList', 'BulletedList']
+    - "/"
+    - [ 'Format', 'Styles' ]
+    - [ 'Bold', 'Italic', 'Underline', 'Blockquote', 'Subscript', 'Superscript']
+    - [ 'Maximize', 'About']
+
+    extraPlugins:
+      - autolink
+      - wordcount
