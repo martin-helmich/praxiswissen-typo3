@@ -1,0 +1,62 @@
+name: Build template files
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'edition-**'
+    paths:
+      - 'theme/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+
+    - name: Install dependencies
+      run: cd theme && yarn install
+    
+    - name: Build files
+      run: |
+        cd theme
+        yarn deps
+        yarn build
+    
+    - name: Deploy files
+      run: |
+        cp theme/public/css/app.css site/fileadmin/css/style.css
+        cp theme/public/css/app.css site/typo3conf/ext/snowboard/Resources/Public/Stylesheets/style.css
+        cp theme/public/javascript/app.js site/fileadmin/javascript/main.js
+        cp theme/public/javascript/app.js site/typo3conf/ext/snowboard/Resources/Public/JavaScript/main.js
+
+        rm -rf site/fileadmin/fonts site/typo3conf/ext/snowboard/Resources/Public/Fonts
+        cp -a theme/public/fonts site/fileadmin/fonts
+        cp -a theme/public/fonts site/typo3conf/ext/snowboard/Resources/Public/Fonts/
+
+    - name: Commit changes
+      run: |
+        git status
+        if [ $(git status --porcelain | wc -l) -ge 0 ] ; then
+          git add site
+          git config --local user.email "github-bot@helmich.me"
+          git config --local user.name "Helmich-Bot"
+          git commit -m "Re-build assets from source"
+        fi
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.token }}
+        branch: ${{ steps.extract_branch.outputs.branch }}
