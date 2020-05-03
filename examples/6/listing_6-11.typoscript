@@ -34,10 +34,22 @@ page {
         width = 1920
       }
 
+      sourceCollection {
+        small {
+          width = 1920
+          pixelDensity = 1
+        }
+        big {
+          width = 1920
+          pixelDensity = 2
+        }
+      }
+
       layoutKey = cssbg
       layout {
         cssbg {
-          element = <style type="text/css">.trailer { background-image: url(###SRC###); }</style>
+          element = <style type="text/css">###SOURCECOLLECTION###</style>
+          source = @media(min-resolution: ###PIXELDENSITY###dppx), (-webkit-min-device-pixel-ratio: ###PIXELDENSITY###) { .trailer { background-image: url(###SRC###); }}
         }
       }
     }
