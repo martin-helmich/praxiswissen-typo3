@@ -3,10 +3,10 @@ test {
   file = fileadmin/templates/vorlage-v2.html
 
   partialRootPaths {
-   10 = fileadmin/templates/content/partials
+    10 = fileadmin/templates/content/partials
   }
 
   variables {
-   header = Test-Überschrift
+    header = Test-Überschrift
   }
 }
