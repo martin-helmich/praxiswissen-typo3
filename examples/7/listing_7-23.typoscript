@@ -68,7 +68,7 @@ page {
       10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
       10 {
         special = directory
-        special.value = 4
+        special.value = {$navigation.secondaryStartpoint}
         levels = 1
         as = secondaryMenuItems
       }
@@ -76,7 +76,7 @@ page {
       20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
       20 {
         special = directory
-        special.value = 2
+        special.value = {$navigation.primaryStartpoint}
         levels = 2
         as = primaryMenuItems
       }

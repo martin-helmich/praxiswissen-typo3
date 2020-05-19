@@ -124,7 +124,7 @@ page {
       menuPrimary = HMENU
       menuPrimary {
         special = directory
-        special.value = 2
+        special.value = {$navigation.primaryStartpoint}
 
         wrap = <ul class="nav navbar-nav navbar-right">|</ul>
 
@@ -166,7 +166,7 @@ page {
       menuSecondary = HMENU
       menuSecondary {
         special = directory
-        special.value = 3
+        special.value = {$navigation.secondaryStartpoint}
 
         wrap = <ul>|</ul>
 

@@ -7,15 +7,7 @@
             {item.title} <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <f:for each="{menuItems}" as="item">
-              <li class="{f:if(condition: '{item.active}', then: 'active')}">
-                <a href="{item.link}">{item.title}</a>
-              </li>
-              <f:if condition="{item.children}">
-                <f:render partial="menu/primary/submenuitems"
-                  arguments="{menuItems: item.children, prefix: item.title}" />
-              </f:if>
-            </f:for>
+            <f:render partial="menu/primary/submenuitems" arguments="{menuItems: item.children}" />
           </ul>
         </li>
       </f:then>

@@ -110,7 +110,7 @@ page {
       menuSecondary = HMENU
       menuSecondary {
         special = directory
-        special.value = 3
+        special.value = {$navigation.secondaryStartpoint}
 
         wrap = <ul>|</ul>
 

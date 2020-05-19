@@ -64,7 +64,7 @@ page {
       10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
       10 {
         special = directory
-        special.value = 4
+        special.value = {$navigation.secondaryStartpoint}
         levels = 1
         as = secondaryMenuItems
       }
@@ -120,7 +120,7 @@ page {
       menuPrimary = HMENU
       menuPrimary {
         special = directory
-        special.value = 2
+        special.value = {$navigation.primaryStartpoint}
 
         wrap = <ul class="nav navbar-nav navbar-right">|</ul>
 
