@@ -58,21 +58,7 @@ page {
   # Die Designvorlage integrieren
   10 = FLUIDTEMPLATE
   10 {
-    file.cObject = CASE
-    file.cObject {
-      key {
-        data = levelfield: -1 , backend_layout_next_level, slide
-        override.data = TSFE:page|backend_layout
-      }
-
-      1 = TEXT
-      1.value = fileadmin/templates/vorlage-v4.html
-
-      2 = TEXT
-      2.value = fileadmin/templates/vorlage_einspaltig.html
-
-      default < .1
-    }
+    file = fileadmin/templates/vorlage-v4.html
 
     partialRootPaths {
       10 = fileadmin/templates/partials
@@ -158,18 +144,6 @@ page {
 
       # Den Inhalt der rechten Spalte ausgeben
       contentMargin = COA
-      contentMargin {
-        10 < styles.content.get
-        10.select.where = colPos=2
-
-        20 < styles.content.get
-        20.select.where = colPos=2
-        20.select.pidInList = {$content.staticMarginContentFolder}
-      }
-
-      # Den Inhalt des Trailers auslesen
-      contentTrailer < styles.content.get
-      contentTrailer.select.where = colPos = 5
     }
   }
 }
