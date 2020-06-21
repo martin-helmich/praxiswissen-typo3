@@ -16,7 +16,7 @@
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          {menuPrimary -> f:format.raw()}
+          <f:render partial="menu/primary" arguments="{menuItems: primaryMenuItems}" />
         </div>
       </div>
     </nav>
@@ -35,9 +35,11 @@
         {print -> f:format.raw()}
       </div>
       <div class="language">
+        <f:render partial="menu/language" arguments="{label: labelLanguage, languages: languages}" />
       </div>
 
-      {menuBreadcrumb -> f:format.raw()}
+      <span class="youarehere">{labelYouAreHere}:</span>
+      <f:render partial="menu/rootline" arguments="{menuItems: rootlineItems}" />
     </div>
   </div>
 </header>
@@ -73,7 +75,9 @@
       </div>
       <div class="col-md-4">
         <h4>{labelMore}</h4>
-        <nav>{menuSecondary -> f:format.raw()}</nav>
+        <nav>
+          <f:render partial="menu/secondary" arguments="{menuItems: secondaryMenuItems}" />
+        </nav>
       </div>
     </div>
   </div>

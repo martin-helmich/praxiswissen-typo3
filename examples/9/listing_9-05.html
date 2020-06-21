@@ -1,0 +1,11 @@
+<div class="btn-group">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="glyphicon glyphicon-globe"></i>
+        {label} <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-right">
+        <f:for each="{languages}" as="language">
+            <li><a href="{language.link}">{language.navigationTitle}</a></li>
+        </f:for>
+    </ul>
+</div>

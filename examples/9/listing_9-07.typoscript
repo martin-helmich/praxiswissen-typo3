@@ -66,7 +66,7 @@ page {
       }
 
       1 = TEXT
-      1.value = fileadmin/templates/vorlage-v4.html
+      1.value = fileadmin/templates/vorlage-v5.html
 
       2 = TEXT
       2.value = fileadmin/templates/vorlage_einspaltig.html
@@ -100,6 +100,11 @@ page {
         special = rootline
         special.range = 2|-1
         as = rootlineItems
+      }
+
+      40 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+      40 {
+        as = languages
       }
     }
 
@@ -166,6 +171,10 @@ page {
       labelYouAreHere.value = You are here
       labelYouAreHere.lang.de = Sie sind hier
 
+      labelLanguage = TEXT
+      labelLanguage.value = Language
+      labelLanguage.lang.de = Sprache
+
       # Den Inhalt der Hauptspalte ausgeben
       contentMain < styles.content.get
 
@@ -187,6 +196,13 @@ page {
   }
 }
 
+# Eine Druckversion der Seite erstellen
+print = PAGE
+print {
+  typeNum = 1
+  10 < styles.content.get
+}
+
 lib.contentElement {
   partialRootPaths {
     10 = fileadmin/templates/content/partials
@@ -196,6 +212,12 @@ lib.contentElement {
 plugin.tx_form.settings {
   yamlConfigurations {
     100 = fileadmin/forms.yaml
+  }
+}
+
+plugin.tx_felogin_login.view {
+  templateRootPaths {
+    10 = fileadmin/templates/ext/felogin
   }
 }
 
