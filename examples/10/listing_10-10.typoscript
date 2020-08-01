@@ -256,6 +256,14 @@ plugin.tx_felogin_login.view {
   }
 }
 
+plugin.tx_indexedsearch {
+  settings.displayRules = 0
+  view {
+    templateRootPaths.10 = fileadmin/templates/ext/indexed_search/templates
+    partialRootPaths.10 = fileadmin/templates/ext/indexed_search/partials
+  }
+}
+
 # Zeitabhängiger Begrüßungstext
 [date("H") >= 11]
 page.10.variables.labelToday.10.value = Good day

@@ -1,0 +1,101 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:flashMessages />
+<f:if condition="{cookieWarning}">
+    <f:render partial="CookieWarning" />
+</f:if>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <f:if condition="{onSubmit}">
+            <f:then>
+                <f:form class="form-horizontal" target="_top" fieldNamePrefix="" action="login" onsubmit="{onSubmit}">
+                    <f:render section="content" arguments="{_all}" />
+                </f:form>
+            </f:then>
+            <f:else>
+                <f:form class="form-horizontal" target="_top" fieldNamePrefix="" action="login">
+                    <f:render section="content" arguments="{_all}" />
+                </f:form>
+            </f:else>
+        </f:if>
+    </div>
+</div>
+
+
+<f:section name="content">
+    <fieldset>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">
+                <f:translate key="username" />
+            </label>
+            <div class="col-sm-10">
+                <f:form.textfield name="user" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">
+                <f:translate key="password" />
+            </label>
+            <div class="col-sm-10">
+                <f:form.password name="pass" class="form-control" data="{rsa-encryption: ''}" />
+            </div>
+        </div>
+
+        <f:if condition="{permaloginStatus} > -1">
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <f:if condition="{permaloginStatus} == 1">
+                                <f:then>
+                                    <f:form.hidden name="permalogin" value="0"
+                                        additionalAttributes="{disabled: 'disabled'}" />
+                                    <f:form.checkbox name="permalogin" id="permalogin" value="1" checked="checked" />
+                                </f:then>
+                                <f:else>
+                                    <f:form.hidden name="permalogin" value="0" />
+                                    <f:form.checkbox name="permalogin" id="permalogin" value="1" />
+                                </f:else>
+                            </f:if>
+                            <f:translate id="permalogin" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </f:if>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <f:form.submit value="{f:translate(key: 'login')}" name="submit" class="btn btn-primary" />
+
+                <f:if condition="{settings.showForgotPassword}">
+                    <f:link.action action="recovery" controller="PasswordRecovery" class="btn btn-link">
+                        <f:render partial="RenderLabelOrMessage" arguments="{key: 'forgot_header'}" />
+                    </f:link.action>
+                </f:if>
+            </div>
+        </div>
+
+        <div class="felogin-hidden">
+            <f:form.hidden name="logintype" value="login" />
+            <f:form.hidden name="pid" value="{storagePid}" />
+            <f:if condition="{redirectURL}!=''">
+                <f:form.hidden name="redirect_url" value="{redirectURL}" />
+            </f:if>
+            <f:if condition="{referer}!=''">
+                <f:form.hidden name="referer" value="{referer}" />
+            </f:if>
+            <f:if condition="{redirectReferrer}!=''">
+                <f:form.hidden name="redirectReferrer" value="off" />
+            </f:if>
+            <f:if condition="{noRedirect}!=''">
+                <f:form.hidden name="noredirect" value="1" />
+            </f:if>
+
+            {extraHidden}
+        </div>
+    </fieldset>
+</f:section>
+
+</html>
