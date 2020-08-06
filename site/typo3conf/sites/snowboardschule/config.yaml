@@ -1,0 +1,39 @@
+base: 'http://localhost/'
+baseVariants: {  }
+errorHandling:
+  -
+    errorCode: '404'
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=40'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    base: /de/
+    typo3Language: de
+    locale: de_DE
+    iso-639-1: de
+    websiteTitle: ''
+    navigationTitle: ''
+    hreflang: de
+    direction: ''
+    flag: de
+    languageId: '0'
+  -
+    title: Englisch
+    enabled: true
+    base: /en/
+    typo3Language: default
+    locale: en_GB.UTF-8
+    iso-639-1: en
+    websiteTitle: 'Snowboard School'
+    navigationTitle: ''
+    hreflang: en
+    direction: ''
+    fallbackType: strict
+    fallbacks: '0'
+    flag: gb
+    languageId: '1'
+rootPageId: 2
+routes: {  }
+websiteTitle: 'Snowboardschule Meyer, Müller & Schmidt'
