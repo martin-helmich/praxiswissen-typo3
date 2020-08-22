@@ -1,7 +1,6 @@
 <?php
 return [
     'BE' => [
-        'adminOnly' => 0,
         'debug' => false,
         'explicitADmode' => 'explicitAllow',
         'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=2$eVZ3ckllSWF3Z2x5UTlFUg$jmSk5Ngs/bxxYLGUzn3EcVnjLqow18KaYxRPCzi8DUY',
@@ -80,7 +79,7 @@ return [
             'xlhtml' => '/usr/bin/',
         ],
         'news' => [
-            'advancedMediaPreview' => 'true',
+            'advancedMediaPreview' => '1',
             'archiveDate' => 'date',
             'categoryBeGroupTceFormsRestriction' => '0',
             'categoryRestriction' => '',
@@ -95,6 +94,7 @@ return [
             'rteForTeaser' => '0',
             'showAdministrationModule' => '1',
             'showImporter' => '0',
+            'slugBehaviour' => 'unique',
             'storageUidImporter' => '1',
             'tagPid' => '1',
         ],
@@ -105,7 +105,6 @@ return [
     ],
     'FE' => [
         'debug' => false,
-        'loginSecurityLevel' => 'normal',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -120,20 +119,69 @@ return [
         'processor_path' => '/usr/bin/',
         'processor_path_lzw' => '/usr/bin/',
     ],
+    'LOG' => [
+        'TYPO3' => [
+            'CMS' => [
+                'deprecations' => [
+                    'writerConfiguration' => [
+                        'notice' => [
+                            'TYPO3\CMS\Core\Log\Writer\FileWriter' => [
+                                'disabled' => true,
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
     'MAIL' => [
         'transport' => 'sendmail',
-        'transport_sendmail_command' => ' -t -i ',
+        'transport_sendmail_command' => '/usr/sbin/sendmail -t -i',
         'transport_smtp_encrypt' => '',
         'transport_smtp_password' => '',
         'transport_smtp_server' => '',
         'transport_smtp_username' => '',
     ],
     'SYS' => [
+        'caching' => [
+            'cacheConfigurations' => [
+                'hash' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                ],
+                'imagesizes' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'options' => [
+                        'compression' => 1,
+                    ],
+                ],
+                'pages' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'options' => [
+                        'compression' => 1,
+                    ],
+                ],
+                'pagesection' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'options' => [
+                        'compression' => 1,
+                    ],
+                ],
+                'rootline' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'options' => [
+                        'compression' => 1,
+                    ],
+                ],
+            ],
+        ],
         'devIPmask' => '',
-        'displayErrors' => 1,
         'encryptionKey' => '220bb49240e16faef6cdfd4355641e36ca02d48daa46152a9905b43a821da41ef7348f26003f4aada80c45a648781dee',
+        'displayErrors' => 0,
         'exceptionalErrors' => 4096,
         'features' => [
+            'felogin.extbase' => true,
+            'fluidBasedPageModule' => true,
+            'rearrangedRedirectMiddlewares' => true,
             'unifiedPageTranslationHandling' => true,
         ],
         'sitename' => 'Praxiswissen TYPO3',
