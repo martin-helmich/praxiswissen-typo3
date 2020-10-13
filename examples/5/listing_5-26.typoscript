@@ -1,3 +1,5 @@
+config.cache_period = 10
+
 page = PAGE
 page {
 

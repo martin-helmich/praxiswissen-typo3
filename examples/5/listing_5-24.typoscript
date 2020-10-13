@@ -7,6 +7,7 @@ page {
   # Meta-Tags angeben
   meta.author = Robert Meyer, Martin Helmich
   meta.description = Hier steht eine Beschreibung
+  meta.viewport = width=device-width, initial-scale=1
 
   # CSS-Dateien einfügen
   includeCSS {

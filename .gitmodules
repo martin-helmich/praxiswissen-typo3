@@ -1,3 +1,6 @@
 [submodule "site/typo3conf/ext/news"]
 	path = site/typo3conf/ext/news
 	url = git@github.com:georgringer/news.git
+[submodule "site/typo3conf/ext/extension_builder"]
+	path = site/typo3conf/ext/extension_builder
+	url = git@github.com:FriendsOfTYPO3/extension_builder

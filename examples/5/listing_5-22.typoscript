@@ -33,7 +33,7 @@ page {
       brandLineSecond.value = Meyer, Müller & Schmidt
 
       today = TEXT
-      today.data = GP:test
+      today.data = date:d. m. Y
     }
   }
 }

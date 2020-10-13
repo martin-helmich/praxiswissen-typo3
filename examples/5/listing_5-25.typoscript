@@ -34,7 +34,7 @@ page {
       brandLineSecond.value = Meyer, Müller & Schmidt
 
       today = TEXT
-      today.data = date:d. m. Y
+      today.data = date:d.m.Y - H:i:s
 
       labelNews = TEXT
       labelNews.value = Aktuelles

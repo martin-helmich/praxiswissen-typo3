@@ -16,6 +16,6 @@ page {
   }
 
   # Die Designvorlage integrieren
-  10 = FILE
+  10 = FLUIDTEMPLATE
   10.file = fileadmin/templates/vorlage-v1.html
 }

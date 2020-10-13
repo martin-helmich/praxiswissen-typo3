@@ -33,7 +33,8 @@ page {
       brandLineSecond.value = Meyer, Müller & Schmidt
 
       today = TEXT
-      today.value = <b>2. 5. 2020</b>
+      today.value = 2. 5. 2020
+      today.wrap = <b> | </b>
     }
   }
 }
