@@ -3,8 +3,9 @@
 <f:form.validationResults for="{element.identifier}">
   <div class="form-group{f:if(condition: '{validationResults.errors.0}', then: ' has-error')}">
     <f:if condition="{doNotShowLabel} != 1">
-      <label class="control-label col-sm-2" for="{element.uniqueIdentifier}">{formvh:translateElementProperty(element:
-        element, property: 'label')}<f:if condition="{element.required}">
+      <label class="control-label col-sm-2" for="{element.uniqueIdentifier}">
+        {formvh:translateElementProperty(element: element, property: 'label')}
+        <f:if condition="{element.required}">
           <f:render partial="Field/Required" />
         </f:if></label>
     </f:if>
