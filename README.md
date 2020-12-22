@@ -8,7 +8,13 @@ Dieses Repository beinhaltet die Beispieldaten und -Skripte für *alle* Ausgaben
 
 Fortgeschrittene Nutzer können die Beispieldaten auch direkt per Git beziehen:
 
-    $ git clone --recursive --branch edition-10 git://github.com/martin-helmich/praxiswissen-typo3.git
+    $ git clone --recursive --branch master git://github.com/martin-helmich/praxiswissen-typo3.git
+
+In diesem Repository existieren folgende Zweige:
+
+- `master` für die 11. Auflage (TYPO3 CMS 10.4 LTS)
+- `edition-10` für die 10. Auflage (TYPO3 CMS 9.5 LTS)
+- `edition-9` für die 9. Auflage (TYPO3 CMS 8.7 LTS)
 
 ## Orientierung
 
