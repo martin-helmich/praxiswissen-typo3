@@ -43,6 +43,10 @@ Wenn du einen Fehler meldest, denke bitte daran, die folgenden Informationen ber
 - Mit welcher (exakten) TYPO3-Version hast du gearbeitet?
 - In welcher Datei ist der Fehler (am besten direkt mit Link zur betroffenen Datei in diesem Repository)
 
+## Rückfragen
+
+Für Rückfragen oder allgemeine Anregungen zum Buch oder zum Beispielprojekt kann gerne das [Github-Diskussionsforum](https://github.com/martin-helmich/praxiswissen-typo3/discussions/new) genutzt werden. Ich versuche stets, zeitnah auf Anfragen zu reagieren.
+
 ## Bildquellen und -lizenzen
 
 - `theme/public/images/trailer1.jpg`, CC-BY [Zach Dischner, flickr.com](https://www.flickr.com/zachd1_618/15252945587)
