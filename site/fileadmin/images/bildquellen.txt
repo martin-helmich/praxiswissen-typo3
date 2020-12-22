@@ -5,3 +5,7 @@ trailer-default.jpg:
 trailer1.jpg:
   Zack Dischner, CC-BY 2.0
   https://commons.wikimedia.org/wiki/File:Winter_is_Coming_(15252945587).jpg
+
+trailer-skigebiet.jpg
+  Silvia Gamsjäger, CC-0
+  https://pixabay.com/photos/vorarlberg-sun-head-klostertal-4046557

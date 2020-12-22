@@ -1,0 +1,12 @@
+<ol class="breadcrumb">
+  <f:for each="{menuItems}" as="item">
+    <f:if condition="{item.current}">
+      <f:then>
+        <li class="active">{item.title}</li>
+      </f:then>
+      <f:else>
+        <li><a href="{item.link}">{item.title}</a></li>
+      </f:else>
+    </f:if>
+  </f:for>
+</ol>

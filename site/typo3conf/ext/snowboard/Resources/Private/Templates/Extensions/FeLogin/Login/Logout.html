@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{cookieWarning}">
+    <f:render partial="CookieWarning" />
+</f:if>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <f:form action="login" actionUri="{actionUri}" target="_top" fieldNamePrefix="" class="form-horizontal">
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        <f:translate key="username" />
+                    </label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">{user.username}</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <f:form.submit value="{f:translate(key: 'logout')}" name="submit" class="btn btn-primary" />
+                    </div>
+                </div>
+
+                <div class="felogin-hidden">
+                    <f:form.hidden name="logintype" value="logout" />
+                    <f:form.hidden name="pid" value="{storagePid}" />
+                </div>
+            </fieldset>
+        </f:form>
+    </div>
+</div>
+
+</html>

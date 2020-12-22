@@ -1,0 +1,12 @@
+test = FLUIDTEMPLATE
+test {
+  file = fileadmin/templates/vorlage-v3.html
+
+  partialRootPaths {
+    10 = fileadmin/templates/content/partials
+  }
+
+  variables {
+    header = Test-Überschrift
+  }
+}

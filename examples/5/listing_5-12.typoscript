@@ -24,5 +24,13 @@ page {
   10 = FLUIDTEMPLATE
   10 {
     file = fileadmin/templates/vorlage-v1.html
+
+    variables {
+      brandLineFirst = TEXT
+      brandLineFirst.value = Snowboardschule
+
+      brandLineSecond = TEXT
+      brandLineSecond.value = Meyer, Müller & Schmidt
+    }
   }
 }

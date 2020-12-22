@@ -1,0 +1,21 @@
+<ul class="nav navbar-nav navbar-right">
+  <f:for each="{menuItems}" as="item">
+    <f:if condition="{item.children}">
+      <f:then>
+        <li class="dropdown {f:if(condition: '{item.active}', then: 'active')}">
+          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="{item.link}">
+            {item.title} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <f:render partial="menu/primary/submenuitems" arguments="{menuItems: item.children}" />
+          </ul>
+        </li>
+      </f:then>
+      <f:else>
+        <li class="{f:if(condition: '{item.active}', then: 'active')}">
+          <a href="{item.link}">{item.title}</a>
+        </li>
+      </f:else>
+    </f:if>
+  </f:for>
+</ul>

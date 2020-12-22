@@ -34,6 +34,12 @@ page {
 
       today = TEXT
       today.data = date:d. m. Y
+
+      labelNews = TEXT
+      labelNews.value = Aktuelles
+
+      labelToday = TEXT
+      labelToday.value = Heute ist der
     }
   }
 }

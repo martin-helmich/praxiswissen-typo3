@@ -1,0 +1,87 @@
+<header>
+  <div class="trailer">
+    <nav class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="80">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          {logo -> f:format.raw()}
+          <a class="navbar-brand" href="#">
+            <div class="brand-line">{brandLineFirst}</div>
+            <div class="brand-line">{brandLineSecond}</div>
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          {menuPrimary -> f:format.raw()}
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container">{contentTrailer -> f:format.raw()}</div>
+    </div>
+  </div>
+
+  <div class="infobar">
+    <div class="container">
+      <div class="pull-right search">
+        {search -> f:format.raw()}
+      </div>
+      <div class="print">
+        {print -> f:format.raw()}
+      </div>
+      <div class="language">
+        {language -> f:format.raw()}
+      </div>
+
+      {menuBreadcrumb -> f:format.raw()}
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="row">
+    <f:if condition="{contentMargin}">
+      <f:then>
+        <div class="col-md-8 content-main">{contentMain -> f:format.raw()}</div>
+        <div class="col-md-4 content-margin">{contentMargin -> f:format.raw()}</div>
+      </f:then>
+      <f:else>
+        <div class="col-md-12 content-main">{contentMain -> f:format.raw()}</div>
+      </f:else>
+    </f:if>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h4>{labelNews}</h4>
+        <aside class="row">
+          <div class="col-md-4 date-wrapper">
+            {labelToday -> f:format.raw()}
+            <div class="date">{today}</div>
+          </div>
+          <div class="col-md-8 news-wrapper">
+            {footerNews -> f:format.raw()}
+          </div>
+        </aside>
+      </div>
+      <div class="col-md-4">
+        <h4>{labelMore}</h4>
+        <nav>
+          <ul>
+            <f:for each="{secondaryMenuItems}" as="item">
+              <li><a href="{item.link}">{item.title}</a></li>
+            </f:for>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>

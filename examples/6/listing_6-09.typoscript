@@ -21,32 +21,10 @@ page {
     main = fileadmin/javascript/main.js
   }
 
-  headerData {
-    10 = IMAGE
-    10 {
-      file {
-        import = 1
-        import {
-          data = levelmedia:-1,slide
-          listNum = 0
-        }
-        treatIdAsReference = 1
-        width = 1920
-      }
-
-      layoutKey = cssbg
-      layout {
-        cssbg {
-          element = <style type="text/css">.trailer { background-image: url(###SRC###); }</style>
-        }
-      }
-    }
-  }
-
   # Die Designvorlage integrieren
   10 = FLUIDTEMPLATE
   10 {
-    file = fileadmin/templates/vorlage-v2.html
+    file = fileadmin/templates/vorlage-v1.html
 
     variables {
       brandLineFirst = TEXT
@@ -81,6 +59,20 @@ page {
             source = |*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###
           }
         }
+      }
+
+      image = IMG_RESOURCE
+      image {
+        file {
+          import = 1
+          import {
+            data = levelmedia:-1,slide
+            listNum = 0
+          }
+          treatIdAsReference = 1
+          width = 1920
+        }
+        stdWrap.wrap = /|
       }
 
       today = TEXT

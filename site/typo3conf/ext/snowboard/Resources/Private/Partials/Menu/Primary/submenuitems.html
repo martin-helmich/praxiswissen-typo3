@@ -1,0 +1,21 @@
+<f:for each="{menuItems}" as="item">
+  <li class="{f:if(condition: '{item.active}', then: 'active')}">
+    <a href="{item.link}">
+      <f:if condition="{prefix}">
+        <span class="text-muted">{prefix} / </span>
+      </f:if>
+      {item.title}
+    </a>
+  </li>
+  <f:if condition="{item.children}">
+    <f:if condition="{prefix}">
+      <f:then>
+        <f:render partial="menu/primary/submenuitems"
+          arguments="{menuItems: item.children, prefix: '{prefix} / {item.title}'}" />
+      </f:then>
+      <f:else>
+        <f:render partial="menu/primary/submenuitems" arguments="{menuItems: item.children, prefix: item.title}" />
+      </f:else>
+    </f:if>
+  </f:if>
+</f:for>

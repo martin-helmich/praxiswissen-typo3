@@ -63,15 +63,9 @@ page {
 
       image = IMG_RESOURCE
       image {
-        file {
-          import = 1
-          import {
-            data = levelmedia:-1,slide
-            listNum = 0
-          }
-          treatIdAsReference = 1
-          width = 1920
-        }
+        file = fileadmin/images/trailer1.jpg
+        file.width = 1920
+        stdWrap.wrap = /|
       }
 
       today = TEXT

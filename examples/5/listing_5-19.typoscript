@@ -33,8 +33,7 @@ page {
       brandLineSecond.value = Meyer, Müller & Schmidt
 
       today = TEXT
-      today.value = 12. 01. 2016
-      today.wrap = <b> | </b>
+      today.data = field:title
     }
   }
 }

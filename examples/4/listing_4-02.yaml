@@ -1,0 +1,20 @@
+base: 'http://localhost/'
+baseVariants: {  }
+errorHandling: {  }
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    base: /
+    typo3Language: de
+    locale: de_DE
+    iso-639-1: de
+    websiteTitle: ''
+    navigationTitle: ''
+    hreflang: de
+    direction: ''
+    flag: de
+    languageId: '0'
+rootPageId: 2
+routes: {  }
+websiteTitle: 'Snowboardschule Meyer, Müller & Schmidt'
