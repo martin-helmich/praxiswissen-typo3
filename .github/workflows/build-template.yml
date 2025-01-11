@@ -18,7 +18,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: 12.x
+        node-version: 20.x
 
     - name: Extract branch name
       shell: bash
@@ -26,24 +26,19 @@ jobs:
       id: extract_branch
 
     - name: Install dependencies
-      run: cd theme && yarn install
+      run: cd theme && npm install
     
     - name: Build files
       run: |
         cd theme
-        yarn deps
-        yarn build
+        npm run build
     
     - name: Deploy files
       run: |
-        cp theme/public/css/app.css site/fileadmin/css/style.css
-        cp theme/public/css/app.css site/typo3conf/ext/snowboard/Resources/Public/Stylesheets/style.css
-        cp theme/public/javascript/app.js site/fileadmin/javascript/main.js
-        cp theme/public/javascript/app.js site/typo3conf/ext/snowboard/Resources/Public/JavaScript/main.js
-
-        rm -rf site/fileadmin/fonts site/typo3conf/ext/snowboard/Resources/Public/Fonts
-        cp -a theme/public/fonts site/fileadmin/fonts
-        cp -a theme/public/fonts site/typo3conf/ext/snowboard/Resources/Public/Fonts/
+        cp theme/dist/assets/index-*.css site/fileadmin/css/style.css
+        cp theme/dist/assets/index-*.css site/typo3conf/ext/snowboard/Resources/Public/Stylesheets/style.css
+        cp theme/dist/assets/index-*.js site/fileadmin/javascript/main.js
+        cp theme/dist/assets/index-*.js site/typo3conf/ext/snowboard/Resources/Public/JavaScript/main.js
 
     - name: Commit changes
       run: |
