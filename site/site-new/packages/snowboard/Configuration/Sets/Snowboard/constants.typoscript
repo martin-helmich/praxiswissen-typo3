@@ -1,0 +1,17 @@
+plugin.tx_news.view.templateRootPath = EXT:snowboard/Resources/Private/Templates/Extensions/News/
+plugin.tx_news.view.partialRootPath = EXT:snowboard/Resources/Private/Partials/Extensions/News/
+  
+#cat=Snowboardschule;type=int+;label=Menü: Hauptmenü-Startpunkt
+#navigation.primaryStartpoint =
+
+#cat=Snowboardschule;type=int+;label=Menü: Hilfsmenü-Startpunkt
+#navigation.secondaryStartpoint =
+
+#cat=Snowboardschule;type=int+;label=Ordner für statischen Inhalt der Randspalte
+content.staticMarginContentFolder =
+
+#cat=Snowboardschule;type=int+;label=News-Detailansicht:
+content.newsDetails =
+
+#cat=Snowboardschule;type=int+;label=Suche:
+content.search =

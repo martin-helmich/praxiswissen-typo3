@@ -1,0 +1,31 @@
+{
+    "name": "snowboard/snowboard",
+    "type": "typo3-cms-extension",
+    "description": "Site Package für die Snowboardschule Meyer, Müller & Schmidt",
+    "authors": [],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^13.4",
+        "typo3/cms-indexed-search": "^13.4",
+        "georgringer/news": "^12.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Snowboard\\Snowboard\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Snowboard\\Snowboard\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "snowboard": "self.version",
+        "typo3-ter/snowboard": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "snowboard"
+        }
+    }
+}

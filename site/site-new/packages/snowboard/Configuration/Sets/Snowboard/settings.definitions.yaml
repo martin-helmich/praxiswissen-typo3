@@ -1,0 +1,20 @@
+categories:
+  Snowboardschule:
+    label: 'Snowboardschule'
+  Snowboardschule.Navigation:
+    label: 'Navigation'
+    parent: Snowboardschule
+
+settings:
+  navigation.primaryStartpoint:
+    label: Navigation
+    category: Snowboardschule.Navigation
+    description: Startpunkt des Hauptmenüs
+    type: int
+    default: "0"
+  navigation.secondaryStartpoint:
+    label: Navigation
+    category: Snowboardschule.Navigation
+    description: Startpunkt des Footer-Menüs
+    type: int
+    default: "0"

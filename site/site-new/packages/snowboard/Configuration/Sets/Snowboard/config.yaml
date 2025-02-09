@@ -1,0 +1,5 @@
+name: snowboard/snowboard
+label: Snowboardschule
+dependencies:
+  - typo3/fluid-styled-content
+  - georgringer/news
