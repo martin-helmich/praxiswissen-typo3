@@ -13,9 +13,25 @@ $dark: $snowboard-primary;
   }
 }
 
+.trailer {
+  background-size: cover;
+  background-position: 50%;
+  color: white;
+}
+
 .hero {
   padding-top: 3em;
   padding-bottom: 3em;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(255,255,255,0), 30%, rgba(255,255,255,0.5));
+
+  .container {
+    color: black;
+    padding-top: 10em;
+    padding-bottom: 1em;
+  }
 }
 
 .infobar {

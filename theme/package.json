@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish:css": "cp dist/assets/index-*.css ../site/packages/snowboard/Resources/public/Stylesheets/index.css",
+    "publish:js": "cp dist/assets/index-*.js ../site/packages/snowboard/Resources/public/JavaScript/index.js",
+    "publish": "npm run publish:css && npm run publish:js"
   },
   "devDependencies": {
     "sass": "^1.83.0",
