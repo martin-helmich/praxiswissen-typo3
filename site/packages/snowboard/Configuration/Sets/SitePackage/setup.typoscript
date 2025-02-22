@@ -75,7 +75,7 @@ page {
       }
 
       1 = TEXT
-      1.value = EXT:snowboard/Resources/Private/Templates/PageV5.html
+      1.value = EXT:snowboard/Resources/Private/Templates/PageV1.html
 
       2 = TEXT
       2.value = EXT:snowboard/Resources/Private/Templates/PageSingleColumn.html
