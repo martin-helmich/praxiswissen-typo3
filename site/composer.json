@@ -1,6 +1,6 @@
 {
 	"name": "typo3/cms-base-distribution",
-	"description" : "TYPO3 CMS Base Distribution",
+	"description": "TYPO3 CMS Base Distribution",
 	"license": "GPL-2.0-or-later",
 	"type": "project",
 	"config": {
@@ -14,7 +14,7 @@
 		"sort-packages": true
 	},
 	"require": {
-		"snowboard/snowboard": "^1.0",
+		"praxiswissen-typo3/snowboard": "dev-master",
 		"typo3/cms-backend": "^13.4",
 		"typo3/cms-belog": "^13.4",
 		"typo3/cms-beuser": "^13.4",
@@ -31,6 +31,7 @@
 		"typo3/cms-impexp": "^13.4",
 		"typo3/cms-info": "^13.4",
 		"typo3/cms-install": "^13.4",
+		"typo3/cms-lowlevel": "^13.4",
 		"typo3/cms-reactions": "^13.4",
 		"typo3/cms-recycler": "^13.4",
 		"typo3/cms-rte-ckeditor": "^13.4",
@@ -41,10 +42,10 @@
 		"typo3/cms-viewpage": "^13.4",
 		"typo3/cms-webhooks": "^13.4"
 	},
-	"repositories": [
-		{
+	"repositories": {
+		"packages": {
 			"type": "path",
 			"url": "./packages/*"
 		}
-	]
+	}
 }
