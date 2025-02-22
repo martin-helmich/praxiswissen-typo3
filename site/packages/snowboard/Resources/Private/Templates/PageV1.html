@@ -1,57 +1,82 @@
+<nav class="navbar navbar-expand-md sticky-top bg-dark navbar-dark">
+  <div class="container">
+    <button class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbar-toggler"
+      aria-controls="navbar-toggler"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    {logo -> f:format.raw()}
+    <a class="navbar-brand" href="#">
+      <div class="brand-line">{brandLineFirst}</div>
+      <div class="brand-line">{brandLineSecond}</div>
+    </a>
+    <div class="navbar-collapse collapse justify-content-end" id="navbar-toggler">
+      Hauptnavigation
+    </div>
+  </div>
+</nav>
+
 <header>
+
   <div class="trailer" style="background-image: url({image})">
-    <nav class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="80">
+    <div class="hero text-center">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          {logo -> f:format.raw()}
-          <a class="navbar-brand" href="#">
-            <div class="brand-line">{brandLineFirst}</div>
-            <div class="brand-line">{brandLineSecond}</div>
-          </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          {menuPrimary -> f:format.raw()}
+        <div class="container">
+          {contentTrailer -> f:format.raw()}
         </div>
       </div>
-    </nav>
-
-    <div class="jumbotron">
-      <div class="container">{contentTrailer -> f:format.raw()}</div>
     </div>
   </div>
 
-  <div class="infobar">
+  <div class="infobar navbar">
     <div class="container">
+      <div id="youarehere">
+        {labelYouAreHere}:
+      </div>
+      <nav aria-labelledby="youarehere">
+        Klickpfad
+      </nav>
+
+      <nav aria-label="Sprach- und Ansichtswechsler" class="navbar-expand">
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+            {print -> f:format.raw()}
+          </li>
+          <li class="nav-item">
+            <div class="language">
+              {language -> f:format.raw()}
+            </div>
+          </li>
+        </ul>
+      </nav>
       <div class="pull-right search">
         {search -> f:format.raw()}
       </div>
-      <div class="print">
-        {print -> f:format.raw()}
-      </div>
-      <div class="language">
-        {language -> f:format.raw()}
-      </div>
-
-      {menuBreadcrumb -> f:format.raw()}
     </div>
   </div>
+
 </header>
 
 <main class="container">
   <div class="row">
     <f:if condition="{contentMargin}">
       <f:then>
-        <div class="col-md-8 content-main">{contentMain -> f:format.raw()}</div>
-        <div class="col-md-4 content-margin">{contentMargin -> f:format.raw()}</div>
+        <div class="col-md-8 content-main">
+          {contentMain -> f:format.raw()}
+        </div>
+        <div class="col-md-4 content-margin">
+          {contentMargin -> f:format.raw()}
+        </div>
       </f:then>
       <f:else>
-        <div class="col-md-12 content-main">{contentMain -> f:format.raw()}</div>
+        <div class="col-md-12 content-main">
+          {contentMain -> f:format.raw()}
+        </div>
       </f:else>
     </f:if>
   </div>
@@ -74,7 +99,9 @@
       </div>
       <div class="col-md-4">
         <h4>{labelMore}</h4>
-        <nav>{menuSecondary -> f:format.raw()}</nav>
+        <nav>
+          Sekundärnavigation
+        </nav>
       </div>
     </div>
   </div>
