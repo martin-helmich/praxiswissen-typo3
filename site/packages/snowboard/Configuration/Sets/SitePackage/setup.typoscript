@@ -20,7 +20,7 @@ page {
 
   # CSS-Dateien einfügen
   includeCSS {
-    main = EXT:snowboard/Resources/Public/Stylesheets/index.css
+    main = EXT:snowboard/Resources/Public/Css/index.css
     main.title = main
     main.media = all
   }
@@ -75,10 +75,10 @@ page {
       }
 
       1 = TEXT
-      1.value = EXT:snowboard/Resources/Private/Templates/PageV1.html
+      1.value = EXT:snowboard/Resources/Private/PageView/Pages/PageV1.html
 
       2 = TEXT
-      2.value = EXT:snowboard/Resources/Private/Templates/PageSingleColumn.html
+      2.value = EXT:snowboard/Resources/Private/PageView/Pages/PageSingleColumn.html
 
       default < .1
     }
@@ -285,8 +285,8 @@ page.10.variables.labelToday.10.lang.de = Guten Abend
 [global]
 
 # Standard-Templates in der Druckansicht
-[request.getQueryParams()["type"] == "1"]
-lib.contentElement {
-  partialRootPaths.10 >
-}
-[global]
+#[request.getQueryParams()["type"] == "1"]
+#lib.contentElement {
+#  partialRootPaths.10 >
+#}
+#[global]
