@@ -14,7 +14,7 @@
 		"sort-packages": true
 	},
 	"require": {
-		"praxiswissen-typo3/snowboard": "dev-master",
+		"praxiswissen-typo3/snowboard": "@dev",
 		"typo3/cms-backend": "^13.4",
 		"typo3/cms-belog": "^13.4",
 		"typo3/cms-beuser": "^13.4",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da03e3a2cf8fd402c4d266841cc2f540",
+    "content-hash": "a3497c28dae5730ec00ba46ab9718647",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1649,7 +1649,7 @@
         },
         {
             "name": "praxiswissen-typo3/snowboard",
-            "version": "dev-master",
+            "version": "dev-edition-12",
             "dist": {
                 "type": "path",
                 "url": "./packages/snowboard",
