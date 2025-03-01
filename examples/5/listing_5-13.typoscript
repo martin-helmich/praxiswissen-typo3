@@ -7,7 +7,6 @@ page {
   # Meta-Tags angeben
   meta.author = Robert Meyer, Martin Helmich, Hannes Strangmeier
   meta.description = Hier steht eine Beschreibung
-  meta.viewport = width=device-width, initial-scale=1
 
   # CSS-Dateien einfügen
   includeCSS {
@@ -16,24 +15,11 @@ page {
     main.media = all
   }
 
-  # JS-Dateien einfügen
-  includeJSFooter {
-    main = EXT:snowboard/Resources/Public/JavaScript/index.js
-  }
-
   # Die Designvorlage integrieren
   10 = PAGEVIEW
   10 {
     paths {
       10 = EXT:snowboard/Resources/Private/PageView/
-    }
-
-    variables {
-      brandLineFirst = TEXT
-      brandLineFirst.value = Snowboardschule
-
-      brandLineSecond = TEXT
-      brandLineSecond.value = Meyer, Müller & Schmidt
     }
   }
 }

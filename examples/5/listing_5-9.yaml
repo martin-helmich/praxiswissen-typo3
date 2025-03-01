@@ -1,4 +1,6 @@
-base: /
+base: https://praxiswissen-typo3.ddev.site/
+dependencies:
+  - praxiswissen-typo3/snowboard
 languages:
   -
     title: Deutsch
@@ -10,5 +12,5 @@ languages:
     navigationTitle: Deutsch
     flag: global
     languageId: 0
-rootPageId: 2
+rootPageId: 14
 websiteTitle: 'Snowboardschule Meyer, Müller & Schmidt'

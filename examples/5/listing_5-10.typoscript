@@ -1,21 +1,8 @@
 page = PAGE
-page {
 
-  # Allgemeine Seiteneigenschaften setzen
-  config.doctype = html5
+# Allgemeine Seiteneigenschaften setzen
+page.config.doctype = html5
 
-  # Meta-Tags angeben
-  meta.author = Robert Meyer, Martin Helmich
-  meta.description = Hier steht eine Beschreibung
-
-  # CSS-Dateien einfügen
-  includeCSS {
-    main = fileadmin/css/style.css
-    main.title = main
-    main.media = all
-  }
-
-  # Die Designvorlage integrieren
-  10 = FLUIDTEMPLATE
-  10.file = fileadmin/templates/vorlage-v1.html
-}
+# Meta-Tags angeben
+page.meta.author = Robert Meyer, Martin Helmich, Hannes Strangmeier
+page.meta.description = Hier steht eine Beschreibung

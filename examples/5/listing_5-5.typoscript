@@ -1,0 +1,21 @@
+# Allgemeine Beschreibung der Queen Mary
+queenMary = SCHIFF
+queenMary {
+  laenge = 150
+  breite = 35
+
+  # Beschreibung der ersten Etage: Autodeck
+  1 = AUTODECK
+
+  # Beschreibung der zweiten Etage: einfache Kabinen
+  2 = KABINEN
+  2.anzahl = 250
+  2.bettenJeKabine =  3
+
+  # Beschreibung der dritten Etage: einfache Kabinen
+  3 < .2
+
+  # Beschreibung der vierten Etage: Luxuskabinen
+  4 < .2
+  4.anzahl = 50
+}
