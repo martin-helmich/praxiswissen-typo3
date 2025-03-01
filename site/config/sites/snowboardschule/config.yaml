@@ -1,4 +1,6 @@
 base: /
+dependencies:
+  - praxiswissen-typo3/snowboard
 languages:
   -
     title: Deutsch
