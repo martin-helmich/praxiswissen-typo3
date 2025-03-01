@@ -5,26 +5,28 @@ page {
   config.doctype = html5
 
   # Meta-Tags angeben
-  meta.author = Robert Meyer, Martin Helmich
+  meta.author = Robert Meyer, Martin Helmich, Hannes Strangmeier
   meta.description = Hier steht eine Beschreibung
   meta.viewport = width=device-width, initial-scale=1
 
   # CSS-Dateien einfügen
   includeCSS {
-    main = fileadmin/css/style.css
+    main = EXT:snowboard/Resources/Public/Css/index.css
     main.title = main
     main.media = all
   }
 
   # JS-Dateien einfügen
   includeJSFooter {
-    main = fileadmin/javascript/main.js
+    main = EXT:snowboard/Resources/Public/JavaScript/index.js
   }
 
   # Die Designvorlage integrieren
-  10 = FLUIDTEMPLATE
+  10 = PAGEVIEW
   10 {
-    file = fileadmin/templates/vorlage-v1.html
+    paths {
+      10 = EXT:snowboard/Resources/Private/PageView/
+    }
 
     variables {
       brandLineFirst = TEXT
@@ -33,49 +35,11 @@ page {
       brandLineSecond = TEXT
       brandLineSecond.value = Meyer, Müller & Schmidt
 
-      logo = IMAGE
-      logo {
-        file = fileadmin/images/logo.png
-        file.width = 200
-
-        params = class="logo"
-
-        sourceCollection {
-          small {
-            width = 200
-            srcsetCandidate = 1x
-          }
-          big {
-            width = 200
-            pixelDensity = 2
-            srcsetCandidate = 2x
-          }
-        }
-
-        layoutKey = srcset
-        layout {
-          srcset {
-            element = <img src="###SRC###" srcset="###SOURCECOLLECTION###" ###PARAMS### ###ALTPARAMS###>
-            source = |*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###
-          }
-        }
-      }
-
       image = IMG_RESOURCE
       image {
-        file = fileadmin/images/trailer1.jpg
+        file = EXT:snowboard/Resources/Public/Images/trailer1.jpg
         file.width = 1920
-        stdWrap.wrap = /|
       }
-
-      today = TEXT
-      today.data = date:d. m. Y
-
-      labelNews = TEXT
-      labelNews.value = Aktuelles
-
-      labelToday = TEXT
-      labelToday.value = Heute ist der
     }
   }
 }
