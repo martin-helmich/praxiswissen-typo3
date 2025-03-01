@@ -1,0 +1,12 @@
+
+lib {
+  logo = IMAGE
+  logo {
+    file = EXT:snowboard/Resources/Public/Images/logo.png
+    file {
+     # width = 80
+    }
+
+    params = class="logo"
+  
+}
