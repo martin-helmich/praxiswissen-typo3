@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md sticky-top bg-dark navbar-dark">
+<nav class="navbar navbar-expand-md sticky-top bg-dark navbar-dark" aria-label="{labelMain}">
   <div class="container">
     <button class="navbar-toggler"
       type="button"
@@ -85,8 +85,8 @@
         </aside>
       </div>
       <div class="col-md-4">
-        <h4>{labelMore}</h4>
-        <nav>
+        <h4 id="secondary-navigation-label">{labelMore}</h4>
+        <nav aria-labelledby="secondary-navigation-label">
           Platzhalter Sekundärnavigation
         </nav>
       </div>
