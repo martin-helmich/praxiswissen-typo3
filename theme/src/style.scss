@@ -1,16 +1,29 @@
 $snowboard-primary: #76001B;
 $snowboard-secondary: #4D87C7;
+$snowboard-neutral: #909090;
 $snowboard-infobar: #f5f5f5;
 
 $dark: $snowboard-primary;
 
 @import "~bootstrap/scss/bootstrap";
 
-.navbar {
+.navbar-dark {
   .logo {
     max-width: 80px;
     max-height: 80px;
     margin-right: 1em;
+  }
+
+  .nav-item > a {
+    color: white;
+  }
+
+  li {
+    border-bottom: 2px solid transparent;
+
+    &.active {
+      border-color: white;
+    }
   }
 }
 
@@ -30,8 +43,13 @@ $dark: $snowboard-primary;
 
   .container {
     color: black;
-    padding-top: 10em;
+    margin-top: 10em;
+    background: rgba(255,255,255,0.8);
+    padding-top: 1em;
     padding-bottom: 1em;
+    border: 1px solid white;
+    border-radius: 16px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
   }
 }
 
@@ -71,15 +89,25 @@ main {
     color: $snowboard-primary;
   }
 
-  h1 {
+  .page-header {
     border-bottom: 1px solid $snowboard-primary;
-    margin-bottom: .5em;
+    padding-bottom: 1em;
+    margin-bottom: 1.5em;
+
+    h1 small {
+      display: block;
+      color: $snowboard-neutral;
+      font-size: 0.6em;
+    }
   }
 
   aside {
+    border-left: 1px solid lighten($snowboard-neutral, 30%);
     h2 {
       border-bottom: 1px solid $snowboard-primary;
       margin-bottom: .5em;
+      padding-bottom: .5em;
+      font-size: 1.5rem;
     }
   }
 }
@@ -91,5 +119,18 @@ footer {
 
   h1, h2, h3, h4, h5, h6 {
     color: $snowboard-secondary;
+    border-bottom: 1px solid $snowboard-secondary;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    a {
+      color: $snowboard-secondary;
+      text-decoration: none;
+    }
   }
 }
