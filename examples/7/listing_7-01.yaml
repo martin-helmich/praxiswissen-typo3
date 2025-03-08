@@ -1,0 +1,11 @@
+categories:
+  Snowboardschule:
+    label: 'Snowboardschule'
+
+settings:
+  snowboardSchool.name:
+    label: Name der Snowboardschule
+    description: Bezeichnet den Namen der Snowboardschule. Wird in der Kopfzeile verwendet.
+    category: Snowboardschule
+    type: string
+    default: Mustermann

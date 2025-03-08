@@ -1,0 +1,22 @@
+<f:for each="{items}" as="item">
+  <li>
+    <a class="dropdown-item" href="{item.link}" {f:if(condition: '{child.current}', then: 'aria-current="page"')}>
+      <f:if condition="{prefix}">
+        <span class="text-muted">{prefix} / </span>
+      </f:if>
+      {item.title}
+    </a>
+  </li>
+  <f:if condition="{item.children}">
+    <f:if condition="{prefix}">
+      <f:then>
+        <f:render partial="Menu/Primary/SubMenuItems"
+          arguments="{items: item.children, prefix: '{prefix} / {item.title}'}" />
+      </f:then>
+      <f:else>
+        <f:render partial="Menu/Primary/SubMenuItems"
+          arguments="{items: item.children, prefix: item.title}" />
+      </f:else>
+    </f:if>
+  </f:if>
+</f:for>

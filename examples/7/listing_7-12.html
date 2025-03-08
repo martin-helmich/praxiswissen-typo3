@@ -28,7 +28,7 @@
       <div class="brand-line">{brandLineSecond}</div>
     </a>
     <div class="navbar-collapse collapse justify-content-end" id="navbar-toggler">
-      Platzhalter Hauptnavigation
+      <f:render partial="Menu/Primary" arguments="{items: primaryMenuItems}" />
     </div>
   </div>
 </nav>
@@ -50,7 +50,15 @@
         {labelYouAreHere}:
       </div>
       <nav aria-labelledby="youarehere">
-        Platzhalter Klickpfad
+        <ol class="breadcrumb">
+          <f:for each="{rootlineItems}" as="item">
+            <li class="breadcrumb-item {f:if(condition: '{item.current}', then: 'active')}">
+              <a href="{item.link}" {f:if(condition: '{item.current}', then: 'aria-current="page"')}>
+                {item.title}
+              </a>
+            </li>
+          </f:for>
+        </ol>
       </nav>
 
       <nav aria-label="Sprach- und Ansichtswechsler" class="navbar-expand">
@@ -97,8 +105,8 @@
         </aside>
       </div>
       <div class="col-md-4">
-        <h4 id="secondary-navigation-label">{labelMore}</h4>
-        <nav aria-labelledby="secondary-navigation-label">
+        <h4>{labelMore}</h4>
+        <nav>
           <ul>
             <f:for each="{secondaryMenuItems}" as="item">
               <li><a href="{item.link}">{item.title}</a></li>

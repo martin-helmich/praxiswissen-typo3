@@ -1,0 +1,23 @@
+<ul class="navbar-nav navbar-right">
+  <f:for each="{items}" as="item">
+    <f:if condition="{item.children}">
+      <f:then>
+        <li class="nav-item dropdown {f:if(condition: '{item.active}', then: 'active')}">
+          <a href="{item.link}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            {item.title} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <f:render partial="Menu/Primary/SubMenuItems" arguments="{items: item.children}" />
+          </ul>
+        </li>
+      </f:then>
+      <f:else>
+        <li class="nav-item {f:if(condition: '{item.active}', then: 'active')}">
+          <a class="nav-link" href="{item.link}" {f:if(condition: '{item.current}', then: 'aria-current="page"')}>
+            {item.title}
+          </a>
+        </li>
+      </f:else>
+    </f:if>
+  </f:for>
+</ul>

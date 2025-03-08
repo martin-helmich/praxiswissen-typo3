@@ -28,7 +28,35 @@
       <div class="brand-line">{brandLineSecond}</div>
     </a>
     <div class="navbar-collapse collapse justify-content-end" id="navbar-toggler">
-      Platzhalter Hauptnavigation
+      <ul class="navbar-nav navbar-right">
+        <f:for each="{primaryMenuItems}" as="item">
+          <f:if condition="{item.children}">
+            <f:then>
+              <li class="nav-item dropdown {f:if(condition: '{item.active}', then: 'active')}">
+                <a href="{item.link}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  {item.title} <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <f:for each="{item.children}" as="child">
+                    <li>
+                      <a class="dropdown-item" href="{child.link}" {f:if(condition: '{child.current}', then: 'aria-current="page"')}>
+                        {child.title}
+                      </a>
+                    </li>
+                  </f:for>
+                </ul>
+              </li>
+            </f:then>
+            <f:else>
+              <li class="nav-item {f:if(condition: '{item.active}', then: 'active')}">
+                <a class="nav-link" href="{item.link}" {f:if(condition: '{item.current}', then: 'aria-current="page"')}>
+                  {item.title}
+                </a>
+              </li>
+            </f:else>
+          </f:if>
+        </f:for>
+      </ul>
     </div>
   </div>
 </nav>
@@ -50,7 +78,15 @@
         {labelYouAreHere}:
       </div>
       <nav aria-labelledby="youarehere">
-        Platzhalter Klickpfad
+        <ol class="breadcrumb">
+          <f:for each="{rootlineItems}" as="item">
+            <li class="breadcrumb-item {f:if(condition: '{item.current}', then: 'active')}">
+              <a href="{item.link}" {f:if(condition: '{item.current}', then: 'aria-current="page"')}>
+                {item.title}
+              </a>
+            </li>
+          </f:for>
+        </ol>
       </nav>
 
       <nav aria-label="Sprach- und Ansichtswechsler" class="navbar-expand">
@@ -97,8 +133,8 @@
         </aside>
       </div>
       <div class="col-md-4">
-        <h4 id="secondary-navigation-label">{labelMore}</h4>
-        <nav aria-labelledby="secondary-navigation-label">
+        <h4>{labelMore}</h4>
+        <nav>
           <ul>
             <f:for each="{secondaryMenuItems}" as="item">
               <li><a href="{item.link}">{item.title}</a></li>
