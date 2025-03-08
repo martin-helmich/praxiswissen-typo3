@@ -1,0 +1,29 @@
+mod.web_layout.BackendLayouts.default {
+  title = Einspaltig, mit Trailer
+  config {
+    backend_layout {
+      colCount = 1
+      rowCount = 2
+      rows {
+        1 {
+          columns {
+            1 {
+              name = Trailer
+              colPos = 5
+              identifier = trailer
+            }
+          }
+        }
+        2 {
+          columns {
+            1 {
+              name = Normal
+              colPos = 0
+              identifier = main
+            }
+          }
+        }
+      }
+    }
+  }
+}

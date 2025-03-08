@@ -1,0 +1,26 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+  <main class="container">
+    <div class="row">
+      <div class="col-md-8 content-main">
+        <f:for each="{content.main.records}" as="record">
+          <f:cObject
+            typoscriptObjectPath="{record.mainType}"
+            data="{record}"
+            table="{record.mainType}"
+          />
+        </f:for>
+      </div>
+      <div class="col-md-4 content-margin">
+        <f:for each="{content.margin.records}" as="record">
+          <f:cObject
+            typoscriptObjectPath="{record.mainType}"
+            data="{record}"
+            table="{record.mainType}"
+          />
+        </f:for>
+      </div>
+    </div>
+  </main>
+</f:section>

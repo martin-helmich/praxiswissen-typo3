@@ -7,8 +7,8 @@ TYPO3:
             Form:
               renderingOptions:
                 templateRootPaths:
-                  20: 'fileadmin/templates/ext/form/templates/'
+                  20: 'EXT:snowboard/Resources/Private/Templates/Extensions/Form/'
                 partialRootPaths:
-                  20: 'fileadmin/templates/ext/form/partials/'
+                  20: 'EXT:snowboard/Resources/Private/Partials/Extensions/Form/'
                 layoutRootPaths:
-                  20: 'fileadmin/templates/ext/form/layouts/'
+                  20: 'EXT:snowboard/Resources/Private/Layouts/Extensions/Form/'

@@ -1,15 +1,82 @@
-tt_content = CASE
-tt_content {
-  key.field = CType
+page = PAGE
+page {
 
-  header = TEXT
-  header {
-    field = header
-    wrap = <h1> | </h1>
+  # Allgemeine Seiteneigenschaften setzen
+  config.doctype = html5
+
+  # Meta-Tags angeben
+  meta.author = Robert Meyer, Martin Helmich, Hannes Strangmeier
+  meta.description = Hier steht eine Beschreibung
+  meta.viewport = width=device-width, initial-scale=1
+
+  # CSS-Dateien einfügen
+  includeCSS {
+    main = EXT:snowboard/Resources/Public/Css/index.css
+    main.title = main
+    main.media = all
   }
 
-  textmedia = TEXT
-  textmedia {
-    field = bodytext
+  # JS-Dateien einfügen
+  includeJSFooter {
+    main = EXT:snowboard/Resources/Public/JavaScript/index.js
+  }
+
+  # Die Designvorlage integrieren
+  10 = PAGEVIEW
+  10 {
+    paths {
+      10 = EXT:snowboard/Resources/Private/PageView/
+    }
+
+    dataProcessing {
+      10 = files
+      10 {
+        as = images
+        references.data = levelmedia:-1,slide
+      }
+
+      20 = menu
+      20 {
+        as = secondaryMenuItems
+        special = directory
+        special.value = {$navigation.secondaryStartpoint}
+        levels = 1
+      }
+
+      30 = menu
+      30 {
+        as = primaryMenuItems
+        special = directory
+        special.value = {$navigation.primaryStartpoint}
+        levels = 10
+      }
+
+      40 = menu
+      40 {
+        as = rootlineItems
+        special = rootline
+        special.range = 0|-1
+      }
+
+      50 = page-content
+      50.as = content
+    }
+
+    variables {
+      brandLineFirst = TEXT
+      brandLineFirst.value = Snowboardschule
+
+      brandLineSecond = TEXT
+      brandLineSecond.value = {$snowboardSchool.name}
+
+      labelMain = TEXT
+      labelMain.value = Hauptnavigation
+
+      labelMore = TEXT
+      labelMore.value = Mehr
+
+      labelYouAreHere = TEXT
+      labelYouAreHere.value = Sie sind hier
+    }
   }
 }

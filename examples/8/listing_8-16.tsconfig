@@ -1,0 +1,37 @@
+mod.web_layout.BackendLayouts.twoColumn {
+  title = Zweispaltig, mit Trailer
+  config {
+    backend_layout {
+      colCount = 3
+      rowCount = 2
+      rows {
+        1 {
+          columns {
+            1 {
+              name = Trailer
+              colPos = 5
+              identifier = trailer
+              colspan = 3
+            }
+          }
+        }
+        2 {
+          columns {
+            1 {
+              name = Normal
+              colPos = 0
+              identifier = main
+              colspan = 2
+            }
+            2 {
+              name = Rand
+              colPos = 1
+              identifier = margin
+              slideMode = collect
+            }
+          }
+        }
+      }
+    }
+  }
+}
