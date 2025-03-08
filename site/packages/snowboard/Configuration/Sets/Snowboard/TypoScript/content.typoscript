@@ -1,0 +1,5 @@
+lib.contentElement {
+  partialRootPaths {
+    10 = EXT:snowboard/Resources/Private/ContentElements/Partials
+  }
+}

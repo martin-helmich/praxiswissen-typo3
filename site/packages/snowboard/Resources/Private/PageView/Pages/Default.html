@@ -1,4 +1,16 @@
-<nav class="navbar navbar-expand-md sticky-top bg-dark navbar-dark">
+<f:asset.css identifier="trailer-image">
+  .trailer {
+    background-image: url({f:uri.image(image:"{images.0}",maxWidth: 1920)});
+  }
+
+  @media(min-resolution: 2dppx) {
+    .trailer {
+      background-image: url({f:uri.image(image:"{images.0}",maxWidth: 3840)});
+    }
+  }
+</f:asset.css>
+
+<nav class="navbar navbar-expand-md sticky-top bg-dark navbar-dark" aria-label="{labelMain}">
   <div class="container">
     <button class="navbar-toggler"
       type="button"
@@ -16,19 +28,22 @@
       <div class="brand-line">{brandLineSecond}</div>
     </a>
     <div class="navbar-collapse collapse justify-content-end" id="navbar-toggler">
-      Platzhalter Hauptnavigation
+      <f:render partial="Menu/Primary" arguments="{items: primaryMenuItems}" />
     </div>
   </div>
 </nav>
 
 <header>
-
-  <div class="trailer" style="background-image: url({image})">
+  <div class="trailer">
     <div class="hero text-center">
       <div class="container">
-        <div class="container">
-          Platzhalter Trailer-Inhalt
-        </div>
+        <f:for each="{content.trailer.records}" as="record">
+          <f:cObject
+            typoscriptObjectPath="{record.mainType}"
+            data="{record}"
+            table="{record.mainType}"
+          />
+        </f:for>
       </div>
     </div>
   </div>
@@ -39,7 +54,15 @@
         {labelYouAreHere}:
       </div>
       <nav aria-labelledby="youarehere">
-        Platzhalter Klickpfad
+        <ol class="breadcrumb">
+          <f:for each="{rootlineItems}" as="item">
+            <li class="breadcrumb-item {f:if(condition: '{item.current}', then: 'active')}">
+              <a href="{item.link}" {f:if(condition: '{item.current}', then: 'aria-current="page"')}>
+                {item.title}
+              </a>
+            </li>
+          </f:for>
+        </ol>
       </nav>
 
       <nav aria-label="Sprach- und Ansichtswechsler" class="navbar-expand">
@@ -65,7 +88,13 @@
 <main class="container">
   <div class="row">
     <div class="col-md-12 content-main">
-      Platzhalter Haupt-Inhalt
+      <f:for each="{content.main.records}" as="record">
+        <f:cObject
+          typoscriptObjectPath="{record.mainType}"
+          data="{record}"
+          table="{record.mainType}"
+        />
+      </f:for>
     </div>
   </div>
 </main>
@@ -88,7 +117,11 @@
       <div class="col-md-4">
         <h4>{labelMore}</h4>
         <nav>
-          Platzhalter Sekundärnavigation
+          <ul>
+            <f:for each="{secondaryMenuItems}" as="item">
+              <li><a href="{item.link}">{item.title}</a></li>
+            </f:for>
+          </ul>
         </nav>
       </div>
     </div>

@@ -1,12 +1,32 @@
-
 lib {
   logo = IMAGE
   logo {
     file = EXT:snowboard/Resources/Public/Images/logo.png
     file {
-     # width = 80
+     width = 80
     }
 
+    sourceCollection {
+      small {
+        width = 200
+        srcsetCandidate = 1x
+      }
+      big {
+        width = 200
+        pixelDensity = 2
+        srcsetCandidate = 2x
+      }
+    }
+
+    layoutKey = srcset
+    layout {
+      srcset {
+        element = <img src="###SRC###" srcset="###SOURCECOLLECTION###" ###PARAMS### ###ALTPARAMS###>
+        source = |*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###
+      }
+    }
+
+    altText = Stilisierter schneebedeckter Berg als Logo der Snowboardschule Meyer, Müller & Schmidt
     params = class="logo"
-  
+  }
 }

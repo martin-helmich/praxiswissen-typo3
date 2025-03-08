@@ -6,15 +6,19 @@ categories:
     parent: Snowboardschule
 
 settings:
+  snowboardSchool.name:
+    label: Name der Snowboardschule
+    description: Bezeichnet den Namen der Snowboardschule. Wird in der Kopfzeile verwendet.
+    category: Snowboardschule
+    type: string
+    default: Mustermann
   navigation.primaryStartpoint:
-    label: Navigation
+    label: Startpunkt des Hauptmenüs
     category: Snowboardschule.Navigation
-    description: Startpunkt des Hauptmenüs
     type: int
-    default: "0"
+    default: 0
   navigation.secondaryStartpoint:
-    label: Navigation
+    label: Startpunkt des Hilfsmenüs
     category: Snowboardschule.Navigation
-    description: Startpunkt des Footer-Menüs
     type: int
     default: "0"

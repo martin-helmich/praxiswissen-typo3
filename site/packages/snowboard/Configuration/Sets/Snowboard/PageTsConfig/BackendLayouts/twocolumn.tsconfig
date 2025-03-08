@@ -1,8 +1,8 @@
-mod.web_layout.BackendLayouts.default {
-  title = Einspaltig, mit Trailer
+mod.web_layout.BackendLayouts.twoColumn {
+  title = Zweispaltig, mit Trailer
   config {
     backend_layout {
-      colCount = 1
+      colCount = 3
       rowCount = 2
       rows {
         1 {
@@ -11,6 +11,7 @@ mod.web_layout.BackendLayouts.default {
               name = Trailer
               colPos = 5
               identifier = trailer
+              colspan = 3
             }
           }
         }
@@ -20,6 +21,13 @@ mod.web_layout.BackendLayouts.default {
               name = Normal
               colPos = 0
               identifier = main
+              colspan = 2
+            }
+            2 {
+              name = Rand
+              colPos = 1
+              identifier = margin
+              slideMode = collect
             }
           }
         }

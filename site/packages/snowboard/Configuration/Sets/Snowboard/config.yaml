@@ -3,4 +3,5 @@ label: 'Snowboard'
 dependencies:
   - typo3/fluid-styled-content
   - typo3/fluid-styled-content-css
-  - georgringer/news
+  - typo3/form
+#  - georgringer/news

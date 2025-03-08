@@ -1,0 +1,15 @@
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = EXT:snowboard/Configuration/Yaml/Forms.yaml
+        }
+    }
+}
+
+module.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = EXT:snowboard/Configuration/Yaml/Forms.yaml
+        }
+    }
+}
