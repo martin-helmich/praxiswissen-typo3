@@ -7,24 +7,20 @@ editor:
   config:
     contentsCss:
       - "EXT:rte_ckeditor/Resources/Public/Css/contents.css"
-      - "EXT:snowboard/Resources/Public/Stylesheets/editor.css"
+      - "EXT:snowboard/Resources/Public/Css/rte.css"
 
     stylesSet:
-    - { name: "Hervorgehoben", element: "span", styles: {color: "#76001B", "font-weight": "bolder", "text-transform": "uppercase"}}
-    - { name: "Warnhinweis", element: "div", attributes: {class: "alert alert-danger"} }
-      
+    - { name: "Warnhinweis", element: "p", attributes: { 'class': 'alert alert-danger' } }
+
     format_tags: "p;h1;h2;h3;pre"
 
-    toolbar:
-    - [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord' ]
-    - [ 'Undo', 'Redo', 'RemoveFormat', 'ShowBlocks' ]
-    - [ 'Link', 'Unlink', 'SpecialChar']
-    - [ 'NumberedList', 'BulletedList']
+    toolbarGroups:
+    - { name: styles, groups: [ format, styles ] }
+    - { name: basicstyles, groups: [ basicstyles ] }
+    - { name: paragraph, groups: [ list] }
     - "/"
-    - [ 'Format', 'Styles' ]
-    - [ 'Bold', 'Italic', 'Underline', 'Blockquote', 'Subscript', 'Superscript']
-    - [ 'Maximize', 'About']
+    - { name: links, groups: [ links ] }
+    - { name: clipboard, groups: [ cleanup, undo ] }
 
-    extraPlugins:
-      - autolink
-      - wordcount
+    importModules:
+      - { module: '@ckeditor/ckeditor5-word-count', exports: ['WordCount'] }
