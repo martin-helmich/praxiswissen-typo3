@@ -1,0 +1,34 @@
+base: /
+dependencies:
+  - praxiswissen-typo3/snowboard
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    locale: de_DE.utf8
+    hreflang: ''
+    base: /
+    websiteTitle: ''
+    navigationTitle: Deutsch
+    flag: de
+    languageId: 0
+  -
+    title: Englisch
+    enabled: true
+    locale: en_US.utf8
+    hreflang: ''
+    base: /en/
+    websiteTitle: 'Snowboard School Meyer, Müller & Schmidt'
+    navigationTitle: Englisch
+    fallbackType: strict
+    fallbacks: '0'
+    flag: en-us-gb
+    languageId: 1
+rootPageId: 14
+websiteTitle: 'Snowboardschule Meyer, Müller & Schmidt'
+routeEnhancers:
+  PrintView:
+    type: PageType
+    default: ''
+    map:
+      .print.html: 1
