@@ -1,0 +1,7 @@
+<f:for each="{content.main.records}" as="record">
+  <f:cObject
+    typoscriptObjectPath="{record.mainType}"
+    data="{record}"
+    table="{record.mainType}"
+  />
+</f:for>

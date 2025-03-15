@@ -1,5 +1,7 @@
+[request?.getPageArguments()?.getPageType() == 0]
 lib.contentElement {
   partialRootPaths {
     10 = EXT:snowboard/Resources/Private/ContentElements/Partials
   }
 }
+[end]

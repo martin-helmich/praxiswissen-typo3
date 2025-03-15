@@ -6,7 +6,8 @@ page {
 
   # Meta-Tags angeben
   meta.author = Robert Meyer, Martin Helmich, Hannes Strangmeier
-  meta.description = Hier steht eine Beschreibung
+  meta.description = This is a description
+  meta.description.lang.de = Hier steht eine Beschreibung
   meta.viewport = width=device-width, initial-scale=1
 
   # CSS-Dateien einfügen
@@ -60,23 +61,42 @@ page {
 
       50 = page-content
       50.as = content
+
+      60 = language-menu
+      60.as = languages
     }
 
     variables {
       brandLineFirst = TEXT
-      brandLineFirst.value = Snowboardschule
+      brandLineFirst.value = Snowboard School
+      brandLineFirst.lang.de = Snowboardschule
 
       brandLineSecond = TEXT
       brandLineSecond.value = {$snowboardSchool.name}
 
       labelMain = TEXT
-      labelMain.value = Hauptnavigation
+      labelMain.value = Main navigation
+      labelMain.lang.de = Hauptnavigation
 
       labelMore = TEXT
-      labelMore.value = Mehr
+      labelMore.value = More
+      labelMore.lang.de = Mehr
 
       labelYouAreHere = TEXT
-      labelYouAreHere.value = Sie sind hier
+      labelYouAreHere.value = You are here
+      labelYouAreHere.lang.de = Sie sind hier
+
+      labelLangNavigation = TEXT
+      labelLangNavigation.value = Display and language navigation
+      labelLangNavigation.lang.de = Sprach- und Ansichtswechsler
+
+      labelLanguages = TEXT
+      labelLanguages.value = Language
+      labelLanguages.lang.de = Sprache
+
+      labelPrint = TEXT
+      labelPrint.value = Print view
+      labelPrint.lang.de = Druckansicht
     }
   }
 }

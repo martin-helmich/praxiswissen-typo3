@@ -1,21 +1,122 @@
-<ul>
-    <f:for each="{mainnavigation}" as="mainnavigationItem">
-        <li class="{f:if(condition: mainnavigationItem.active, then:'active')}">
-            <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">
-                {mainnavigationItem.title}
-            </a>
-            <f:if condition="{mainnavigationItem.children}">
-                <ul>
-                    <f:for each="{mainnavigationItem.children}" as="child">
-                        <li class="{f:if(condition: child.active, then:'active')}">
-                            <a href="{child.link}" target="{child.target}" title="{child.title}">
-                                {child.title}
-                            </a>
-                        </li>
-                    </f:for>
-                </ul>
-            </f:if>
-        </li>
-    </f:for>
-</ul>
-<f:render section="Main" />
+<f:asset.css identifier="trailer-image">
+  .trailer {
+    background-image: url({f:uri.image(image:"{images.0}",maxWidth: 1920)});
+  }
+
+  @media(min-resolution: 2dppx) {
+    .trailer {
+      background-image: url({f:uri.image(image:"{images.0}",maxWidth: 3840)});
+    }
+  }
+</f:asset.css>
+
+<nav class="navbar navbar-expand-md sticky-top bg-dark navbar-dark" aria-label="{labelMain}">
+  <div class="container">
+    <button class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbar-toggler"
+      aria-controls="navbar-toggler"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <f:cObject typoscriptObjectPath="lib.logo" />
+    <a class="navbar-brand" href="#">
+      <div class="brand-line">{brandLineFirst}</div>
+      <div class="brand-line">{brandLineSecond}</div>
+    </a>
+    <div class="navbar-collapse collapse justify-content-end" id="navbar-toggler">
+      <f:render partial="Menu/Primary" arguments="{items: primaryMenuItems}" />
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="trailer">
+    <div class="hero text-center">
+      <f:if condition="{content.trailer.records}">
+        <div class="container">
+          <f:for each="{content.trailer.records}" as="record">
+            <f:cObject
+              typoscriptObjectPath="{record.mainType}"
+              data="{record}"
+              table="{record.mainType}"
+            />
+          </f:for>
+        </div>
+      </f:if>
+    </div>
+  </div>
+
+  <div class="infobar navbar">
+    <div class="container">
+      <div id="youarehere">
+        {labelYouAreHere}:
+      </div>
+      <nav aria-labelledby="youarehere">
+        <ol class="breadcrumb">
+          <f:for each="{rootlineItems}" as="item">
+            <li class="breadcrumb-item {f:if(condition: '{item.current}', then: 'active')}">
+              <a href="{item.link}" {f:if(condition: '{item.current}', then: 'aria-current="page"')}>
+                {item.title}
+              </a>
+            </li>
+          </f:for>
+        </ol>
+      </nav>
+
+      <nav aria-label="{labelLangNavigation}" class="navbar-expand">
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+            <f:link.page pageType="1" class="nav-link">{labelPrint}</f:link.page>
+          </li>
+          <li class="nav-item">
+            <div class="language">
+              <f:render
+                partial="Menu/Language"
+                arguments="{label: labelLanguages, languages: languages}"
+              />
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="pull-right search">
+        Platzhalter Suche
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<f:render section="main" />
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h4>{labelNews}</h4>
+        <aside class="row">
+          <div class="col-md-4 date-wrapper">
+            {labelToday -> f:format.raw()}
+            <div class="date">{today}</div>
+          </div>
+          <div class="col-md-8 news-wrapper">
+            Platzhalter News
+          </div>
+        </aside>
+      </div>
+      <div class="col-md-4">
+        <h4>{labelMore}</h4>
+        <nav>
+          <ul>
+            <f:for each="{secondaryMenuItems}" as="item">
+              <li><a href="{item.link}">{item.title}</a></li>
+            </f:for>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>

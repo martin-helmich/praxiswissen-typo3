@@ -1,0 +1,29 @@
+print = PAGE
+print {
+  typeNum = 1
+
+  10 = PAGEVIEW
+  10 {
+    paths {
+      10 = EXT:snowboard/Resources/Private/PrintView/
+    }
+
+    dataProcessing {
+      50 = page-content
+      50.as = content
+    }
+
+    variables {
+      brandLineFirst = TEXT
+      brandLineFirst.value = Snowboard School
+      brandLineFirst.lang.de = Snowboardschule
+
+      brandLineSecond = TEXT
+      brandLineSecond.value = {$snowboardSchool.name}
+    }
+  }
+}
+
+[request.getPageArguments()?.getPageType() == 1]
+lib.contentElement.partialRootPaths.10 >
+[end]
