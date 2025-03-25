@@ -1,11 +1,19 @@
-<div class="tx-indexedsearch-searchbox">
-	<f:form action="search" method="post" id="tx_indexedsearch" pageUid="{settings.targetPid}">
-		<div class="form-group">
-			<f:form.textfield name="search[sword]" value="{sword}" placeholder="Ihre Suche" class="form-control input-lg" />
-		</div>
-		<div class="tx-indexedsearch-search-submit">
-			<f:form.submit name="search[submitButton]" value="{f:translate(key: 'form.submit')}" id="tx-indexedsearch-searchbox-button-submit" class="btn btn-success btn-lg btn-block" />
-		</div>
-	</f:form>
-</div>
-<f:render partial="Rules" />
+<html
+  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+  data-namespace-typo3-fluid="true">
+<ul>
+  <f:for each="{news}" as="newsItem">
+    <li>
+      <div>
+        <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+          {newsItem.title}
+        </n:link>
+      </div>
+			<f:if condition="{newsItem.author}">
+				{newsItem.author},
+			</f:if>
+      {newsItem.datetime -> f:format.date(format: '{f:translate(key:\'dateFormat\')}')}
+    </li>
+  </f:for>
+</li>

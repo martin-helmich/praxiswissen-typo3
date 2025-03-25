@@ -1,6 +1,11 @@
 base: /
 dependencies:
   - praxiswissen-typo3/snowboard
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=43'
 languages:
   -
     title: Deutsch
@@ -25,10 +30,19 @@ languages:
     flag: en-us-gb
     languageId: 1
 rootPageId: 14
-websiteTitle: 'Snowboardschule Meyer, Müller & Schmidt'
 routeEnhancers:
   PageType:
     type: PageType
     default: ''
     map:
       .print.html: 1
+      sitemap.xml: 1533906435
+  Sitemap:
+    type: Simple
+    routePath: 'sitemap-type/{sitemap}'
+    aspects:
+      sitemap:
+        type: StaticValueMapper
+        map:
+          pages: pages
+websiteTitle: 'Snowboardschule Meyer, Müller & Schmidt'

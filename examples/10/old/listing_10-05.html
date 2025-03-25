@@ -1,0 +1,18 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+<ul>
+  <f:for each="{news}" as="newsItem">
+    <li>
+      <div>
+        <n:link newsItem="{newsItem}"
+                settings="{settings}"
+                title="{newsItem.title}">
+          {newsItem.title}
+        </n:link>
+      </div>
+      <f:if condition="{newsItem.author}">
+        {newsItem.author},
+      </f:if>
+      {newsItem.datetime -> f:format.date(format: 'd.m.Y')}
+    </li>
+  </f:for>
+</ul>

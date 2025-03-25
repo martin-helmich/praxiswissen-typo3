@@ -1,0 +1,11 @@
+<div class="tx-indexedsearch-searchbox">
+	<f:form action="search" method="post" id="tx_indexedsearch" pageUid="{settings.targetPid}">
+		<div class="form-group">
+			<f:form.textfield name="search[sword]" value="{sword}" placeholder="Ihre Suche" class="form-control input-lg" />
+		</div>
+		<div class="tx-indexedsearch-search-submit">
+			<f:form.submit name="search[submitButton]" value="{f:translate(key: 'form.submit')}" id="tx-indexedsearch-searchbox-button-submit" class="btn btn-success btn-lg btn-block" />
+		</div>
+	</f:form>
+</div>
+<f:render partial="Rules" />

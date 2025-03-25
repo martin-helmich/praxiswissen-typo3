@@ -1,0 +1,23 @@
+config {
+  index_enable = 1
+  index_externals = 1
+}
+
+lib.search = EXTBASEPLUGIN
+lib.search {
+  extensionName = IndexedSearch
+  pluginName = Pi2
+
+  settings {
+    targetPid = {$indexedsearch.targetPid}
+  }
+
+  view {
+    templateRootPaths {
+      100 = EXT:snowboard/Resources/Private/Templates/Extensions/IndexedSearchNavbar
+    }
+    partialRootPaths {
+      100 = EXT:snowboard/Resources/Private/Partials/Extensions/IndexedSearchNavbar
+    }
+  }
+}

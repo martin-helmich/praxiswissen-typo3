@@ -28,35 +28,7 @@
       <div class="brand-line">{brandLineSecond}</div>
     </a>
     <div class="navbar-collapse collapse justify-content-end" id="navbar-toggler">
-      <ul class="navbar-nav navbar-right">
-        <f:for each="{primaryMenuItems}" as="item">
-          <f:if condition="{item.children}">
-            <f:then>
-              <li class="nav-item dropdown {f:if(condition: '{item.active}', then: 'active')}">
-                <a href="{item.link}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  {item.title} <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <f:for each="{item.children}" as="child">
-                    <li>
-                      <a class="dropdown-item" href="{child.link}" {f:if(condition: '{child.current}', then: 'aria-current="page"')}>
-                        {child.title}
-                      </a>
-                    </li>
-                  </f:for>
-                </ul>
-              </li>
-            </f:then>
-            <f:else>
-              <li class="nav-item {f:if(condition: '{item.active}', then: 'active')}">
-                <a class="nav-link" href="{item.link}" {f:if(condition: '{item.current}', then: 'aria-current="page"')}>
-                  {item.title}
-                </a>
-              </li>
-            </f:else>
-          </f:if>
-        </f:for>
-      </ul>
+      <f:render partial="Menu/Primary" arguments="{items: primaryMenuItems}" />
     </div>
   </div>
 </nav>
@@ -64,11 +36,17 @@
 <header>
   <div class="trailer">
     <div class="hero text-center">
-      <div class="container">
+      <f:if condition="{content.trailer.records}">
         <div class="container">
-          Platzhalter Trailer-Inhalt
+          <f:for each="{content.trailer.records}" as="record">
+            <f:cObject
+              typoscriptObjectPath="{record.mainType}"
+              data="{record}"
+              table="{record.mainType}"
+            />
+          </f:for>
         </div>
-      </div>
+      </f:if>
     </div>
   </div>
 
@@ -78,43 +56,48 @@
         {labelYouAreHere}:
       </div>
       <nav aria-labelledby="youarehere">
-        Platzhalter Klickpfad
+        <ol class="breadcrumb">
+          <f:for each="{rootlineItems}" as="item">
+            <li class="breadcrumb-item {f:if(condition: '{item.current}', then: 'active')}">
+              <a href="{item.link}" {f:if(condition: '{item.current}', then: 'aria-current="page"')}>
+                {item.title}
+              </a>
+            </li>
+          </f:for>
+        </ol>
       </nav>
 
-      <nav aria-label="Sprach- und Ansichtswechsler" class="navbar-expand">
+      <nav aria-label="{labelLangNavigation}" class="navbar-expand">
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item">
-            Platzhalter Druckansicht
+            <f:link.page pageType="1" class="nav-link">{labelPrint}</f:link.page>
           </li>
           <li class="nav-item">
             <div class="language">
-              Platzhalter Sprachauswahl
+              <f:render
+                partial="Menu/Language"
+                arguments="{label: labelLanguages, languages: languages}"
+              />
             </div>
           </li>
         </ul>
       </nav>
       <div class="pull-right search">
-        Platzhalter Suche
+        <f:cObject typoscriptObjectPath="lib.search" />
       </div>
     </div>
   </div>
 
 </header>
 
-<main class="container">
-  <div class="row">
-    <div class="col-md-12 content-main">
-      Platzhalter Haupt-Inhalt
-    </div>
-  </div>
-</main>
+<f:render section="main" />
 
 <footer>
   <div class="container">
     <div class="row">
       <div class="col-md-8">
         <h4>{labelNews}</h4>
-        Platzhalter News
+        <f:cObject typoscriptObjectPath="lib.footerNews" />
       </div>
       <div class="col-md-4">
         <h4>{labelMore}</h4>

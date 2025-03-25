@@ -1,3 +1,109 @@
-config {
-  spamProtectEmailAddresses = 1
+page = PAGE
+page {
+
+  # Allgemeine Seiteneigenschaften setzen
+  config.doctype = html5
+
+  # Meta-Tags angeben
+  meta.description {
+    field = description
+    ifEmpty = Günstige Snowboardkurse zu jeder Jahreszeit!
+  }
+
+  meta.author {
+    field = author
+    ifEmpty = Robert Meyer, Martin Helmich, Hannes Strangmeier
+  }
+
+  meta.viewport = width=device-width, initial-scale=1
+
+  # CSS-Dateien einfügen
+  includeCSS {
+    main = EXT:snowboard/Resources/Public/Css/index.css
+    main.title = main
+    main.media = all
+  }
+
+  # JS-Dateien einfügen
+  includeJSFooter {
+    main = EXT:snowboard/Resources/Public/JavaScript/index.js
+  }
+
+  # Die Designvorlage integrieren
+  10 = PAGEVIEW
+  10 {
+    paths {
+      10 = EXT:snowboard/Resources/Private/PageView/
+    }
+
+    dataProcessing {
+      10 = files
+      10 {
+        as = images
+        references.data = levelmedia:-1,slide
+      }
+
+      20 = menu
+      20 {
+        as = secondaryMenuItems
+        special = directory
+        special.value = {$navigation.secondaryStartpoint}
+        levels = 1
+      }
+
+      30 = menu
+      30 {
+        as = primaryMenuItems
+        special = directory
+        special.value = {$navigation.primaryStartpoint}
+        levels = 10
+      }
+
+      40 = menu
+      40 {
+        as = rootlineItems
+        special = rootline
+        special.range = 0|-1
+      }
+
+      50 = page-content
+      50.as = content
+
+      60 = language-menu
+      60.as = languages
+    }
+
+    variables {
+      brandLineFirst = TEXT
+      brandLineFirst.value = Snowboard School
+      brandLineFirst.lang.de = Snowboardschule
+
+      brandLineSecond = TEXT
+      brandLineSecond.value = {$snowboardSchool.name}
+
+      labelMain = TEXT
+      labelMain.value = Main navigation
+      labelMain.lang.de = Hauptnavigation
+
+      labelMore = TEXT
+      labelMore.value = More
+      labelMore.lang.de = Mehr
+
+      labelYouAreHere = TEXT
+      labelYouAreHere.value = You are here
+      labelYouAreHere.lang.de = Sie sind hier
+
+      labelLangNavigation = TEXT
+      labelLangNavigation.value = Display and language navigation
+      labelLangNavigation.lang.de = Sprach- und Ansichtswechsler
+
+      labelLanguages = TEXT
+      labelLanguages.value = Language
+      labelLanguages.lang.de = Sprache
+
+      labelPrint = TEXT
+      labelPrint.value = Print view
+      labelPrint.lang.de = Druckansicht
+    }
+  }
 }

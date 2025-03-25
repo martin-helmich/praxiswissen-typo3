@@ -1,0 +1,5 @@
+trailer1.jpg:
+https://upload.wikimedia.org/wikipedia/commons/6/6c/Winter_is_Coming_%2815252945587%29.jpg
+
+trailer-skigebiet.jpg:
+https://unsplash.com/photos/person-riding-cable-train-above-snow-covered-field-YDB1P399ijc

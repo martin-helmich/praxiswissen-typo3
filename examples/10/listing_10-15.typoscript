@@ -1,0 +1,4 @@
+config {
+  index_enable = 1
+  index_externals = 1
+}

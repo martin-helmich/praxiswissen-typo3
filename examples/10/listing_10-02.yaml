@@ -1,0 +1,9 @@
+name: praxiswissen-typo3/snowboard
+label: 'Snowboard'
+dependencies:
+  - typo3/fluid-styled-content
+  - typo3/fluid-styled-content-css
+  - typo3/form
+  - typo3/seo-sitemap
+  - georgringer/news
+  - georgringer/news-twb5

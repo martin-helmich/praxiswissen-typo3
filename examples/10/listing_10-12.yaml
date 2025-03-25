@@ -25,10 +25,33 @@ languages:
     flag: en-us-gb
     languageId: 1
 rootPageId: 14
-websiteTitle: 'Snowboardschule Meyer, Müller & Schmidt'
 routeEnhancers:
   PageType:
     type: PageType
     default: ''
     map:
       .print.html: 1
+      sitemap.xml: 1533906435
+  Sitemap:
+    type: Simple
+    routePath: 'sitemap-type/{sitemap}'
+    aspects:
+      sitemap:
+        type: StaticValueMapper
+        map:
+          pages: pages
+  News:
+    type: Extbase
+    limitToPages:
+      - 40
+    extension: News
+    plugin: Pi1
+    routes:
+      - routePath: '/{news-title}'
+        _controller: 'News::detail'
+        _arguments:
+          news-title: news
+    aspects:
+      news-title:
+        type: NewsTitle
+websiteTitle: 'Snowboardschule Meyer, Müller & Schmidt'

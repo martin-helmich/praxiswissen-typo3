@@ -1,0 +1,37 @@
+categories:
+  Snowboardschule:
+    label: 'Snowboardschule'
+  Snowboardschule.Navigation:
+    label: 'Navigation'
+    parent: Snowboardschule
+  Snowboardschule.News:
+    label: News
+    parent: Snowboardschule
+
+settings:
+  snowboardSchool.name:
+    label: Name der Snowboardschule
+    description: Bezeichnet den Namen der Snowboardschule. Wird in der Kopfzeile verwendet.
+    category: Snowboardschule
+    type: string
+    default: Mustermann
+  navigation.primaryStartpoint:
+    label: Startpunkt des Hauptmenüs
+    category: Snowboardschule.Navigation
+    type: int
+    default: 0
+  navigation.secondaryStartpoint:
+    label: Startpunkt des Hilfsmenüs
+    category: Snowboardschule.Navigation
+    type: int
+    default: 0
+  news.storagePid:
+    label: Speicherseite für Newsbeiträge
+    category: Snowboardschule.News
+    type: int
+    default: 0
+  news.detailPid:
+    label: Detailansicht für Newsbeiträge
+    category: Snowboardschule.News
+    type: int
+    default: 0
