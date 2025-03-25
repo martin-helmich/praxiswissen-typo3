@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:reactions/Resources/Private/Language/locallang_module_reactions.xlf" date="2022-08-17T12:12:34Z" product-name="reactions" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="mlang_labels_tablabel" approved="yes">
+        <source>Reaction Administration</source>
+        <target state="final">Reactions-Verwaltung</target>
+      </trans-unit>
+      <trans-unit id="mlang_labels_tabdescr" approved="yes">
+        <source>This is the administration area for Reactions.</source>
+        <target state="final">Dies ist der Verwaltungsbereich für Reactions.</target>
+      </trans-unit>
+      <trans-unit id="mlang_tabs_tab" approved="yes">
+        <source>Reactions</source>
+        <target state="final">Reactions</target>
+      </trans-unit>
+      <trans-unit id="heading_text" approved="yes">
+        <source>Reactions — Manage Incoming HTTP Webhooks</source>
+        <target state="final">Reactions - Verwaltung eingehender HTTP-Webhooks</target>
+      </trans-unit>
+      <trans-unit id="reaction_not_found.title" approved="yes">
+        <source>No reactions found!</source>
+        <target state="final">Keine Reactions gefunden!</target>
+      </trans-unit>
+      <trans-unit id="reaction_not_found.message" approved="yes">
+        <source>There are currently no reaction records found in the database.</source>
+        <target state="final">In der Datenbank wurden keine Reactions-Datensätze gefunden.</target>
+      </trans-unit>
+      <trans-unit id="reaction_create" approved="yes">
+        <source>Create new reaction</source>
+        <target state="final">Neue Reaction erstellen</target>
+      </trans-unit>
+      <trans-unit id="reaction_not_found_with_filter.title" approved="yes">
+        <source>No reactions found!</source>
+        <target state="final">Keine Reactions gefunden!</target>
+      </trans-unit>
+      <trans-unit id="reaction_not_found_with_filter.message" approved="yes">
+        <source>With the current set of filters applied, no reactions could be found.</source>
+        <target state="final">Mit den aktuellen Filtern konnten keine Reactions gefunden werden.</target>
+      </trans-unit>
+      <trans-unit id="reaction_no_filter" approved="yes">
+        <source>Remove all filter</source>
+        <target state="final">Alle Filter entfernen</target>
+      </trans-unit>
+      <trans-unit id="reaction_no_implementation_class" approved="yes">
+        <source>Implementation class for reaction type "%s" is missing.</source>
+        <target state="final">Implementierungsklasse für Typ "%s" fehlt.</target>
+      </trans-unit>
+      <trans-unit id="reaction_example" approved="yes">
+        <source>Example</source>
+        <target state="final">Beispiel</target>
+      </trans-unit>
+      <trans-unit id="filter.sendButton" approved="yes">
+        <source>Filter</source>
+        <target state="final">Filter</target>
+      </trans-unit>
+      <trans-unit id="filter.resetButton" approved="yes">
+        <source>Reset</source>
+        <target state="final">Zurücksetzen</target>
+      </trans-unit>
+      <trans-unit id="filter.name" approved="yes">
+        <source>Name</source>
+        <target state="final">Name</target>
+      </trans-unit>
+      <trans-unit id="filter.reaction_type" approved="yes">
+        <source>Reaction Type</source>
+        <target state="final">Typ</target>
+      </trans-unit>
+      <trans-unit id="filter.reaction_type.showAll" approved="yes">
+        <source>Show all</source>
+        <target state="final">Alle anzeigen</target>
+      </trans-unit>
+      <trans-unit id="pagination.previous" approved="yes">
+        <source>previous</source>
+        <target state="final">vorherige</target>
+      </trans-unit>
+      <trans-unit id="pagination.next" approved="yes">
+        <source>next</source>
+        <target state="final">nächste</target>
+      </trans-unit>
+      <trans-unit id="pagination.first" approved="yes">
+        <source>first</source>
+        <target state="final">erste</target>
+      </trans-unit>
+      <trans-unit id="pagination.last" approved="yes">
+        <source>last</source>
+        <target state="final">letzte</target>
+      </trans-unit>
+      <trans-unit id="pagination.records" approved="yes">
+        <source>Records</source>
+        <target state="final">Datensätze</target>
+      </trans-unit>
+      <trans-unit id="pagination.page" approved="yes">
+        <source>Page</source>
+        <target state="final">Seite</target>
+      </trans-unit>
+      <trans-unit id="pagination.refresh" approved="yes">
+        <source>Refresh</source>
+        <target state="final">Aktualisieren</target>
+      </trans-unit>
+      <trans-unit id="labels.delete.title" approved="yes">
+        <source>Delete reactions</source>
+        <target state="final">Reactions löschen</target>
+      </trans-unit>
+      <trans-unit id="labels.delete.message" approved="yes">
+        <source>Are you sure you want to delete all marked reactions?</source>
+        <target state="final">Sind Sie sicher, dass Sie alle ausgewählten Reactions löschen möchten?</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

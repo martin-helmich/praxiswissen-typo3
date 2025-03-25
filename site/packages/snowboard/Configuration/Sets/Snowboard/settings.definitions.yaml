@@ -4,6 +4,9 @@ categories:
   Snowboardschule.Navigation:
     label: 'Navigation'
     parent: Snowboardschule
+  Snowboardschule.News:
+    label: News
+    parent: Snowboardschule
 
 settings:
   snowboardSchool.name:
@@ -21,4 +24,14 @@ settings:
     label: Startpunkt des Hilfsmenüs
     category: Snowboardschule.Navigation
     type: int
-    default: "0"
+    default: 0
+  news.storagePid:
+    label: Speicherseite für Newsbeiträge
+    category: Snowboardschule.News
+    type: int
+    default: 0
+  news.detailPid:
+    label: Detailansicht für Newsbeiträge
+    category: Snowboardschule.News
+    type: int
+    default: 0

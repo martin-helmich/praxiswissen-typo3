@@ -7,3 +7,12 @@ styles:
   content:
     textmedia:
       maxW: 1000
+news:
+  storagePid: 18
+  detailPid: 40
+indexedsearch:
+  view:
+    templateRootPath: 'EXT:snowboard/Resources/Private/Templates/Extensions/IndexedSearch'
+    partialRootPath: 'EXT:snowboard/Resources/Private/Partials/Extensions/IndexedSearch'
+    layoutRootPath: 'EXT:snowboard/Resources/Private/Layouts/Extensions/IndexedSearch'
+  targetPid: 41

@@ -10,7 +10,7 @@
         "typo3/cms-rte-ckeditor": "^13.4",
         "typo3/cms-fluid-styled-content": "^13.4",
         "typo3/cms-indexed-search": "^13.4",
-        "georgringer/news": "^12.2"
+        "georgringer/news": "^12.3"
     },
     "autoload": {
         "psr-4": {

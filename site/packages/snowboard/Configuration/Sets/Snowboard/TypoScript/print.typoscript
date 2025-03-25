@@ -23,7 +23,3 @@ print {
     }
   }
 }
-
-[request.getPageArguments()?.getPageType() == 1]
-lib.contentElement.partialRootPaths.10 >
-[end]

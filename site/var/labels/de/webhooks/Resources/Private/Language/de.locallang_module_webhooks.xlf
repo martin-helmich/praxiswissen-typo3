@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:webhooks/Resources/Private/Language/locallang_module_webhooks.xlf" date="2022-08-17T12:12:34Z" product-name="webhooks" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="mlang_labels_tablabel" resname="mlang_labels_tablabel" approved="yes">
+        <source>Webhook Administration</source>
+        <target state="final">Webhook-Verwaltung</target>
+      </trans-unit>
+      <trans-unit id="mlang_labels_tabdescr" resname="mlang_labels_tabdescr" approved="yes">
+        <source>This is the administration area for Webhooks.</source>
+        <target state="final">Das ist der Verwaltungsbereich für Webhooks.</target>
+      </trans-unit>
+      <trans-unit id="mlang_tabs_tab" resname="mlang_tabs_tab" approved="yes">
+        <source>Webhooks</source>
+        <target state="final">Webhooks</target>
+      </trans-unit>
+      <trans-unit id="heading_text" resname="heading_text" approved="yes">
+        <source>Webhooks — Manage Outgoing HTTP Webhooks</source>
+        <target state="final">Webhooks - Ausgehende HTTP-Webhooks verwalten</target>
+      </trans-unit>
+      <trans-unit id="webhook_not_found.title" resname="webhook_not_found.title" approved="yes">
+        <source>No webhooks found!</source>
+        <target state="final">Es wurden keine Webhooks gefunden!</target>
+      </trans-unit>
+      <trans-unit id="webhook_not_found.message" resname="webhook_not_found.message" approved="yes">
+        <source>There are currently no webhooks records found in the database.</source>
+        <target state="final">Es wurden keine Webhook-Datensätze in der Datenbank gefunden.</target>
+      </trans-unit>
+      <trans-unit id="webhook_create" resname="webhook_create" approved="yes">
+        <source>Create new webhook</source>
+        <target state="final">Neuen Webhook erstellen</target>
+      </trans-unit>
+      <trans-unit id="webhook_not_found_with_filter.title" resname="webhook_not_found_with_filter.title" approved="yes">
+        <source>No webhooks found!</source>
+        <target state="final">Es wurden keine Webhooks gefunden!</target>
+      </trans-unit>
+      <trans-unit id="webhook_not_found_with_filter.message" resname="webhook_not_found_with_filter.message" approved="yes">
+        <source>With the current set of filters applied, no webhooks could be found.</source>
+        <target state="final">Mit den aktuellen Filtern konnten keine Webhooks gefunden werden.</target>
+      </trans-unit>
+      <trans-unit id="webhook_no_filter" resname="webhook_no_filter" approved="yes">
+        <source>Remove all filter</source>
+        <target state="final">Alle Filter entfernen</target>
+      </trans-unit>
+      <trans-unit id="webhook_no_implementation_class" resname="webhook_no_implementation_class" approved="yes">
+        <source>Implementation class for webhook type "%s" is missing.</source>
+        <target state="final">Die Implementierungsklasse für den Webhook-Typ "%s" fehlt.</target>
+      </trans-unit>
+      <trans-unit id="webhook_example" resname="webhook_example" approved="yes">
+        <source>Example</source>
+        <target state="final">Beispiel</target>
+      </trans-unit>
+      <trans-unit id="filter.sendButton" resname="filter.sendButton" approved="yes">
+        <source>Filter</source>
+        <target state="final">Filter</target>
+      </trans-unit>
+      <trans-unit id="filter.resetButton" resname="filter.resetButton" approved="yes">
+        <source>Reset</source>
+        <target state="final">Zurücksetzen</target>
+      </trans-unit>
+      <trans-unit id="filter.name" resname="filter.name" approved="yes">
+        <source>Name</source>
+        <target state="final">Name</target>
+      </trans-unit>
+      <trans-unit id="filter.webhook_type" resname="filter.webhook_type" approved="yes">
+        <source>Webhook Trigger</source>
+        <target state="final">Webhook-Auslöser</target>
+      </trans-unit>
+      <trans-unit id="filter.webhook_type.showAll" resname="filter.webhook_type.showAll" approved="yes">
+        <source>Show all</source>
+        <target state="final">Alle anzeigen</target>
+      </trans-unit>
+      <trans-unit id="pagination.previous" resname="pagination.previous" approved="yes">
+        <source>previous</source>
+        <target state="final">vorherige</target>
+      </trans-unit>
+      <trans-unit id="pagination.next" resname="pagination.next" approved="yes">
+        <source>next</source>
+        <target state="final">nächste</target>
+      </trans-unit>
+      <trans-unit id="pagination.first" resname="pagination.first" approved="yes">
+        <source>first</source>
+        <target state="final">erster</target>
+      </trans-unit>
+      <trans-unit id="pagination.last" resname="pagination.last" approved="yes">
+        <source>last</source>
+        <target state="final">letzter</target>
+      </trans-unit>
+      <trans-unit id="pagination.records" resname="pagination.records" approved="yes">
+        <source>Records</source>
+        <target state="final">Datensätze</target>
+      </trans-unit>
+      <trans-unit id="pagination.page" resname="pagination.page" approved="yes">
+        <source>Page</source>
+        <target state="final">Seite</target>
+      </trans-unit>
+      <trans-unit id="pagination.refresh" resname="pagination.refresh" approved="yes">
+        <source>Refresh</source>
+        <target state="final">Aktualisieren</target>
+      </trans-unit>
+      <trans-unit id="labels.delete.title" resname="labels.delete.title" approved="yes">
+        <source>Delete webhooks</source>
+        <target state="final">Webhooks löschen</target>
+      </trans-unit>
+      <trans-unit id="labels.delete.message" resname="labels.delete.message" approved="yes">
+        <source>Are you sure you want to delete all marked webhooks?</source>
+        <target state="final">Sind Sie sicher, dass Sie alle ausgewählten Webhooks löschen möchten?</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

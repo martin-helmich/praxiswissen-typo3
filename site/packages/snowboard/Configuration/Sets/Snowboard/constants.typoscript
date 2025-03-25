@@ -1,0 +1,7 @@
+plugin.tx_news {
+    view.twb5 {
+        templateRootPath = EXT:snowboard/Resources/Private/Templates/Extensions/News/
+        partialRootPath = EXT:snowboard/Resources/Private/Partials/Extensions/News/
+        layoutRootPath = EXT:snowboard/Resources/Private/Layouts/Extensions/News/
+    }
+}

@@ -83,7 +83,7 @@
         </ul>
       </nav>
       <div class="pull-right search">
-        Platzhalter Suche
+        <f:cObject typoscriptObjectPath="lib.search" />
       </div>
     </div>
   </div>
@@ -97,15 +97,7 @@
     <div class="row">
       <div class="col-md-8">
         <h4>{labelNews}</h4>
-        <aside class="row">
-          <div class="col-md-4 date-wrapper">
-            {labelToday -> f:format.raw()}
-            <div class="date">{today}</div>
-          </div>
-          <div class="col-md-8 news-wrapper">
-            Platzhalter News
-          </div>
-        </aside>
+        <f:cObject typoscriptObjectPath="lib.footerNews" />
       </div>
       <div class="col-md-4">
         <h4>{labelMore}</h4>

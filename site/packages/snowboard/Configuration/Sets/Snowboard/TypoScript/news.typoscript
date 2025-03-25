@@ -1,0 +1,26 @@
+page.10.variables {
+  labelNews = TEXT
+  labelNews.value = News
+  labelNews.lang.de = Aktuelles
+}
+
+lib.footerNews = EXTBASEPLUGIN
+lib.footerNews {
+  extensionName = News
+  pluginName = NewsListSticky
+
+  persistence {
+    storagePid = {$news.storagePid}
+  }
+
+  settings {
+    defaultDetailPid = {$news.detailPid}
+    list.paginate.itemsPerPage = 3
+  }
+
+  view {
+    templateRootPaths {
+      100 = EXT:snowboard/Resources/Private/Templates/Extensions/NewsFooter
+    }
+  }
+}

@@ -1,36 +1,39 @@
-{namespace n=GeorgRinger\News\ViewHelpers}
+<html
+  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+  data-namespace-typo3-fluid="true">
 
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-			{newsItem.title}
-		</n:link>
-		<div class="pull-right">
-			<f:if condition="{newsItem.author}">
-				{newsItem.author},
-			</f:if>
-			<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-		</div>
-	</div>
-	<div class="panel-body">
-		<f:if condition="{newsItem.tags}">
-			<div>
-				<f:for each="{newsItem.tags}" as="tag">
-					<span class="label label-default">{tag}</span>
-				</f:for>
-			</div>
-		</f:if>
-		<f:if condition="{newsItem.teaser}">
-			<f:then>
-				{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
-			</f:then>
-			<f:else>
-				{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
-			</f:else>
-		</f:if>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">
+      <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+        {newsItem.title}
+      </n:link>
+    </h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">
+      <f:if condition="{newsItem.author}">
+        {newsItem.author},
+      </f:if>
+      {newsItem.datetime -> f:format.date(format: '{f:translate(key:\'dateFormat\')}')}
+    </h6>
+    <f:if condition="{newsItem.tags}">
+      <div>
+        <f:for each="{newsItem.tags}" as="tag">
+          <span class="label label-default">{tag}</span>
+        </f:for>
+      </div>
+    </f:if>
+    <f:if condition="{newsItem.teaser}">
+      <f:then>
+        {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+      </f:then>
+      <f:else>
+        {newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+      </f:else>
+    </f:if>
 
-		<n:link class="btn btn-primary" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-			Weiterlesen
-		</n:link>
-	</div>
+    <n:link class="card-link" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+      Weiterlesen
+    </n:link>
+  </div>
 </div>

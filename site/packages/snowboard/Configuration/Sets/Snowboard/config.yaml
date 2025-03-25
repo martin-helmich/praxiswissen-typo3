@@ -4,4 +4,7 @@ dependencies:
   - typo3/fluid-styled-content
   - typo3/fluid-styled-content-css
   - typo3/form
-#  - georgringer/news
+  - typo3/seo-sitemap
+  - typo3/indexed-search
+  - georgringer/news
+  - georgringer/news-twb5

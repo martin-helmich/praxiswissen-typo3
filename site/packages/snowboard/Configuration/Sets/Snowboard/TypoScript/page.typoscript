@@ -5,9 +5,16 @@ page {
   config.doctype = html5
 
   # Meta-Tags angeben
-  meta.author = Robert Meyer, Martin Helmich, Hannes Strangmeier
-  meta.description = This is a description
-  meta.description.lang.de = Hier steht eine Beschreibung
+  meta.description {
+    field = description
+    ifEmpty = Günstige Snowboardkurse zu jeder Jahreszeit!
+  }
+
+  meta.author {
+    field = author
+    ifEmpty = Robert Meyer, Martin Helmich, Hannes Strangmeier
+  }
+
   meta.viewport = width=device-width, initial-scale=1
 
   # CSS-Dateien einfügen

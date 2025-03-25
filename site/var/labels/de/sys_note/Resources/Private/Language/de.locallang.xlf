@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:sys_note/Resources/Private/Language/locallang.xlf" date="2011-10-17T20:22:37Z" product-name="sys_note" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="internal_note" approved="yes">
+        <source>Internal notes</source>
+        <target state="final">Interne Notizen</target>
+      </trans-unit>
+      <trans-unit id="new_internal_note" approved="yes">
+        <source>Create internal note for this page</source>
+        <target state="final">Interne Notiz für diese Seite erstellen</target>
+      </trans-unit>
+      <trans-unit id="author" approved="yes">
+        <source>Author</source>
+        <target state="final">Autor:</target>
+      </trans-unit>
+      <trans-unit id="date" approved="yes">
+        <source>Date</source>
+        <target state="final">Datum:</target>
+      </trans-unit>
+      <trans-unit id="edit_note" approved="yes">
+        <source>Edit note record</source>
+        <target state="final">Notiz-Datensatz bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="personal" approved="yes">
+        <source>Personal</source>
+        <target state="final">Persönlich:</target>
+      </trans-unit>
+      <trans-unit id="category.1" approved="yes">
+        <source>Instructions</source>
+        <target state="final">Anleitungen</target>
+      </trans-unit>
+      <trans-unit id="category.2" approved="yes">
+        <source>Template</source>
+        <target state="final">Vorlage</target>
+      </trans-unit>
+      <trans-unit id="category.3" approved="yes">
+        <source>Notes</source>
+        <target state="final">Notizen</target>
+      </trans-unit>
+      <trans-unit id="category.4" approved="yes">
+        <source>To-do</source>
+        <target state="final">To-Do</target>
+      </trans-unit>
+      <trans-unit id="yes" approved="yes">
+        <source>Yes</source>
+        <target state="final">Ja</target>
+      </trans-unit>
+      <trans-unit id="author_deleted" approved="yes">
+        <source>Unknown author</source>
+        <target state="final">Unbekannter Autor</target>
+      </trans-unit>
+      <trans-unit id="widget_group.sys_note_widget.title" approved="yes">
+        <source>System Notes</source>
+        <target state="final">Systemhinweise</target>
+      </trans-unit>
+      <!-- All -->
+      <trans-unit id="widget.all.title" approved="yes">
+        <source>All System Notes</source>
+        <target state="final">Alle Systemhinweise</target>
+      </trans-unit>
+      <trans-unit id="widget.all.description" approved="yes">
+        <source>Shows a list of all pages with system notes</source>
+        <target state="final">Zeigt eine Liste aller Seiten mit Systemhinweisen</target>
+      </trans-unit>
+      <!-- Default -->
+      <trans-unit id="widget.pagesWithInternalNoteDefault.title" approved="yes">
+        <source>Notes in the category "Default"</source>
+        <target state="final">Notizen in der Kategorie "Standard"</target>
+      </trans-unit>
+      <trans-unit id="widget.pagesWithInternalNoteDefault.description" approved="yes">
+        <source>Shows a list of all pages with system notes in the category "Default"</source>
+        <target state="final">Zeigt eine Liste aller Seiten mit Systemhinweisen in der Kategorie "Standard" an</target>
+      </trans-unit>
+      <!-- ToDos -->
+      <trans-unit id="widget.pagesWithInternalNoteToDos.title" approved="yes">
+        <source>Notes in the category "ToDo"</source>
+        <target state="final">Notizen in der Kategorie "ToDo"</target>
+      </trans-unit>
+      <trans-unit id="widget.pagesWithInternalNoteToDos.description" approved="yes">
+        <source>Shows a list of all pages with system notes in the category "ToDo"</source>
+        <target state="final">Zeigt eine Liste aller Seiten mit Systemhinweisen in der Kategorie "ToDo" an</target>
+      </trans-unit>
+      <!-- Template -->
+      <trans-unit id="widget.pagesWithInternalNoteTemplate.title" approved="yes">
+        <source>Notes in the category "Template"</source>
+        <target state="final">Notizen in der Kategorie "Vorlage"</target>
+      </trans-unit>
+      <trans-unit id="widget.pagesWithInternalNoteTemplate.description" approved="yes">
+        <source>Shows a list of all pages with system notes in the category "Template"</source>
+        <target state="final">Zeigt eine Liste aller Seiten mit Systemhinweisen in der Kategorie "Vorlage" an</target>
+      </trans-unit>
+      <!-- Notes -->
+      <trans-unit id="widget.pagesWithInternalNoteNotes.title" approved="yes">
+        <source>Notes in the category "Notes"</source>
+        <target state="final">Notizen in der Kategorie "Notizen"</target>
+      </trans-unit>
+      <trans-unit id="widget.pagesWithInternalNoteNotes.description" approved="yes">
+        <source>Shows a list of all pages with system notes in the category "Notes"</source>
+        <target state="final">Zeigt eine Liste aller Seiten mit Systemhinweisen in der Kategorie "Notizen" an</target>
+      </trans-unit>
+      <!-- Instructions -->
+      <trans-unit id="widget.pagesWithInternalNoteInstructions.title" approved="yes">
+        <source>Notes in the category "Instructions"</source>
+        <target state="final">Notizen in der Kategorie "Anweisungen"</target>
+      </trans-unit>
+      <trans-unit id="widget.pagesWithInternalNoteInstructions.description" approved="yes">
+        <source>Shows a list of all pages with system notes in the category "Instructions"</source>
+        <target state="final">Zeigt eine Liste aller Seiten mit Systemhinweisen in der Kategorie "Anweisungen" an</target>
+      </trans-unit>
+      <trans-unit id="created" approved="yes">
+        <source>Created</source>
+        <target state="final">Erstellt</target>
+      </trans-unit>
+      <trans-unit id="subject" approved="yes">
+        <source>Subject</source>
+        <target state="final">Betreff</target>
+      </trans-unit>
+      <trans-unit id="subjectmessage" approved="yes">
+        <source>Subject and message</source>
+        <target state="final">Betreff und Nachricht</target>
+      </trans-unit>
+      <trans-unit id="goto_page" approved="yes">
+        <source>Go to page</source>
+        <target state="final">Gehe zur Seite</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
