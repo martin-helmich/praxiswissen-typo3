@@ -1,7 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:form.validationResults for="{element.identifier}">
-  {validationResults -> f:debug()}
-  {element.identifier -> f:debug()}
   <div class="row mb-3 {f:if(condition: '{validationResults.errors.0}', then: ' was-validated')}">
     <f:if condition="{doNotShowLabel} != 1">
       <label class="col-form-label col-sm-3" for="{element.uniqueIdentifier}">
