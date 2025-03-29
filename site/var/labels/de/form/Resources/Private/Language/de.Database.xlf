@@ -105,9 +105,12 @@
       <trans-unit id="tt_content.finishersDefinition.EmailToSender.language.label" xml:space="preserve" approved="yes">
 				<source>Translation language</source>
 			<target state="final">Sprache der Übersetzung</target></trans-unit>
+      <trans-unit id="tt_content.finishersDefinition.EmailToSender.language.0" xml:space="preserve" approved="yes">
+				<source>Auto</source>
+			<target state="final">Auto</target></trans-unit>
       <trans-unit id="tt_content.finishersDefinition.EmailToSender.language.1" xml:space="preserve" approved="yes">
-				<source>Default</source>
-			<target state="final">Standard</target></trans-unit>
+				<source>EN</source>
+			<target state="final">EN</target></trans-unit>
       <trans-unit id="tt_content.finishersDefinition.EmailToSender.title.label" xml:space="preserve" approved="yes">
 				<source>Title</source>
 			<target state="final">Titel</target></trans-unit>
@@ -141,9 +144,12 @@
       <trans-unit id="tt_content.finishersDefinition.EmailToReceiver.language.label" xml:space="preserve" approved="yes">
 				<source>Translation language</source>
 			<target state="final">Sprache der Übersetzung</target></trans-unit>
+      <trans-unit id="tt_content.finishersDefinition.EmailToReceiver.language.0" xml:space="preserve" approved="yes">
+				<source>Auto</source>
+			<target state="final">Auto</target></trans-unit>
       <trans-unit id="tt_content.finishersDefinition.EmailToReceiver.language.1" xml:space="preserve" approved="yes">
-				<source>Default</source>
-			<target state="final">Standard</target></trans-unit>
+				<source>EN</source>
+			<target state="final">EN</target></trans-unit>
       <trans-unit id="tt_content.finishersDefinition.EmailToReceiver.title.label" xml:space="preserve" approved="yes">
 				<source>Title</source>
 			<target state="final">Titel</target></trans-unit>
@@ -636,6 +642,9 @@
       <trans-unit id="formEditor.elements.Form.finisher.EmailToSender.editor.language.label" xml:space="preserve" approved="yes">
 				<source>Translation language</source>
 			<target state="final">Sprache der Übersetzung</target></trans-unit>
+      <trans-unit id="formEditor.elements.Form.finisher.EmailToSender.editor.language.0" xml:space="preserve" approved="yes">
+				<source>Auto</source>
+			<target state="final">Auto</target></trans-unit>
       <trans-unit id="formEditor.elements.Form.finisher.EmailToSender.editor.language.1" xml:space="preserve" approved="yes">
 				<source>EN</source>
 			<target state="final">EN</target></trans-unit>
@@ -690,6 +699,9 @@
       <trans-unit id="formEditor.elements.Form.finisher.EmailToReceiver.editor.language.label" xml:space="preserve" approved="yes">
 				<source>Translation language</source>
 			<target state="final">Sprache der Übersetzung</target></trans-unit>
+      <trans-unit id="formEditor.elements.Form.finisher.EmailToReceiver.editor.language.0" xml:space="preserve" approved="yes">
+				<source>Auto</source>
+			<target state="final">Auto</target></trans-unit>
       <trans-unit id="formEditor.elements.Form.finisher.EmailToReceiver.editor.language.1" xml:space="preserve" approved="yes">
 				<source>EN</source>
 			<target state="final">EN</target></trans-unit>
@@ -983,7 +995,7 @@
 			<target state="final">Datum</target></trans-unit>
       <trans-unit id="formEditor.elements.Date.editor.defaultValue.placeholder" xml:space="preserve" approved="yes">
 				<source>A date in format Y-m-d (e.g 2018-03-17)</source>
-			<target state="final">Ein Datum im Format d.m.Y (17.3.2018)</target></trans-unit>
+			<target state="final">Ein Datum im Format Y-m-d (z.B. 2018-03-17)</target></trans-unit>
       <trans-unit id="formEditor.elements.Date.editor.step.fieldExplanationText" xml:space="preserve" approved="yes">
 				<source>Specify the number of days between each occurrence of this event.</source>
 			<target state="final">Anzahl Tage zwischen zwei Wiederholungen dieses Events</target></trans-unit>
@@ -1007,7 +1019,7 @@
 			<target state="final">Ein Datum im Format Y-m-d (z.B. 2018-03-17)</target></trans-unit>
       <trans-unit id="formEditor.elements.DatePicker.validators.DateRange.editor.maximum.placeholder" xml:space="preserve" approved="yes">
 				<source>A date in format Y-m-d (e.g 2018-03-17)</source>
-			<target state="final">Ein Datum im Format d.m.Y (17.3.2018)</target></trans-unit>
+			<target state="final">Ein Datum im Format Y-m-d (z.B. 2018-03-17)</target></trans-unit>
       <trans-unit id="formEditor.elements.Password.label" xml:space="preserve" approved="yes">
 				<source>Password</source>
 			<target state="final">Passwort</target></trans-unit>
