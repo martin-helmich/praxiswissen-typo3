@@ -2,12 +2,12 @@
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
    'snowboard',
-   'Configuration/TSConfig/Page/page_access.typoscript',
+   'Configuration/PageTsConfig/page_access.typoscript',
    'Snowboardschule: Zugriffsrechte'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
    'snowboard',
-   'Configuration/TSConfig/Page/fields.typoscript',
+   'Configuration/PageTsConfig/fields.typoscript',
    'Snowboardschule: Backend-Anpassungen'
 );
