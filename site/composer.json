@@ -48,7 +48,7 @@
 	"repositories": {
 		"packages": {
 			"type": "path",
-			"url": "./packages/*"
+			"url": "./packages/snowboard"
 		}
 	}
 }
